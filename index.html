@@ -7,7 +7,260 @@
     <link rel="icon" type="image/png" href="images/swan-lake-digital-mascot-favicon-ai-developer-builder-64x.png">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Existing styles unchanged up to portfolio */
+        :root {
+            --cyan: #00ffff;
+            --cyan-glow: #00f0f0;
+            --purple: #8a2be2;
+            --dark: #0a0e1a;
+            --glass: rgba(5, 15, 35, 0.6);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #e0f0ff;
+            background: #000814;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        canvas#background {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 3;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border-radius: 50px;
+            padding: 12px 40px;
+            border: 1px solid rgba(0,255,255,0.2);
+            box-shadow: 0 8px 32px rgba(0,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .nav-logo {
+            height: 55px;
+            width: auto;
+            filter: drop-shadow(0 0 20px var(--cyan));
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav a {
+            color: #e0f0ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            position: relative;
+            text-shadow: 0 0 10px rgba(0,255,255,0.3);
+        }
+
+        nav a:hover {
+            color: var(--cyan);
+            text-shadow: 0 0 20px var(--cyan);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cyan);
+            transition: width 0.4s;
+        }
+
+        nav a:hover::after { width: 100%; }
+
+        header {
+            padding: 140px 20px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-swan {
+            width: 180px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 30px var(--cyan));
+        }
+
+        .name-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .name-profile {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--cyan);
+            box-shadow: 0 0 50px var(--cyan-glow);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5rem;
+            margin: 0;
+            background: linear-gradient(90deg, var(--cyan), #ffffff, var(--cyan));
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientFlow 8s ease infinite;
+            text-shadow: 0 0 40px rgba(0,255,255,0.6);
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0%; }
+            100% { background-position: 200%; }
+        }
+
+        header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--cyan);
+            text-shadow: 0 0 30px var(--cyan-glow);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            opacity: 0.9;
+            text-shadow: 0 0 15px rgba(0,0,0,0.8);
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        h2.section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 80px;
+            background: linear-gradient(to right, var(--cyan), #a0f0ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(0,255,255,0.4);
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(30px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            border: 1px solid rgba(0,255,255,0.3);
+            box-shadow: 0 10px 40px rgba(0,255,255,0.15);
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(0,255,255,0.08), transparent);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0,255,255,0.4);
+        }
+
+        .glass-card:hover::before { opacity: 1; }
+
+        .job h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            color: var(--cyan);
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px var(--cyan-glow);
+        }
+
+        .job p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            text-shadow: 0 0 10px rgba(0,0,0,0.7);
+        }
+
+        p {
+            text-shadow: 0 0 10px rgba(0,0,0,0.7);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-item {
+            background: rgba(0,255,255,0.05);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(0,255,255,0.2);
+            transition: all 0.4s;
+        }
+
+        .skill-item:hover {
+            background: rgba(0,255,255,0.1);
+            box-shadow: 0 0 30px rgba(0,255,255,0.3);
+        }
+
+        .skill-item strong {
+            color: var(--cyan);
+            font-size: 1.2rem;
+            text-shadow: 0 0 20px var(--cyan-glow);
+        }
 
         .portfolio-grid {
             display: grid;
@@ -126,7 +379,50 @@
         .wire1 { bottom: 20px; left: 10%; width: 30%; transform: rotate(10deg); }
         .wire2 { bottom: 30px; right: 15%; width: 25%; transform: rotate(-15deg); }
 
-        /* Contact updates */
+        .demo-overlay {
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(10,20,40,0.9), transparent);
+            transform: translateY(50px);
+            transition: transform 0.5s;
+        }
+
+        .demo-card:hover .demo-overlay { transform: translateY(0); }
+
+        .demo-overlay h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyan);
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px var(--cyan-glow);
+        }
+
+        .demo-overlay a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            padding: 60px;
+            text-align: left;
+        }
+
+        .contact-logo {
+            width: 280px;
+            filter: drop-shadow(0 0 40px var(--cyan));
+        }
+
+        .contact-text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
         .contact-text a {
             color: var(--cyan);
             text-decoration: none;
@@ -137,14 +433,112 @@
             text-shadow: 0 0 15px var(--cyan);
         }
 
-        /* Rest unchanged */
+        footer {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            text-shadow: 0 0 10px rgba(0,0,0,0.7);
+        }
+
+        @media (max-width: 1024px) {
+            h1 { font-size: 4.2rem; }
+            nav { gap: 40px; padding: 12px 30px; }
+            .nav-logo { height: 50px; }
+            .name-row { gap: 30px; }
+            .name-profile { width: 160px; height: 160px; }
+            .hero-swan { width: 160px; }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 120px 20px 60px; }
+            h1 { font-size: 3.5rem; }
+            header h2 { font-size: 1.8rem; }
+            nav { gap: 20px; padding: 10px 20px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+            .nav-logo { height: 45px; }
+            section { padding: 80px 0; }
+            .glass-card { padding: 25px; }
+            .name-row { flex-direction: column; gap: 20px; }
+            .name-profile { width: 140px; height: 140px; }
+            .hero-swan { width: 130px; margin-bottom: 20px; }
+            .contact-card { flex-direction: column; gap: 40px; padding: 40px; text-align: center; }
+            .contact-logo { width: 220px; }
+        }
     </style>
 </head>
 <body>
-    <!-- Nav, header, experience, skills unchanged -->
+    <canvas id="background"></canvas>
+
+    <nav>
+        <a href="#home">
+            <img src="images/swan-lake-digital-mascot-512x.png" alt="Swan Lake Digital Logo" class="nav-logo">
+        </a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
-        <!-- Previous sections -->
+        <header id="home">
+            <img src="images/swan-lake-digital-mascot-512x.png" alt="Swan Lake Digital Logo" class="hero-swan">
+            <div class="name-row">
+                <img src="images/mikedsayre-profile.png" alt="Mike Sayre" class="name-profile">
+                <h1>Mike Sayre</h1>
+            </div>
+            <h2>Solutions Architect & AI Strategist</h2>
+            <p>Architecting intelligent systems that bridge visionary business goals with cutting-edge technical execution.</p>
+        </header>
+
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="glass-card job">
+                <h3>Principal Solutions Architect & AI Strategist</h3>
+                <p>Swan Lake Digital Consulting | Feb 2023 – Present</p>
+                <ul>
+                    <li>Designed and deployed custom AI applications on Google Cloud Platform (Vertex AI, Gemini).</li>
+                    <li>Built functional prototypes in Python/Visual Studio to demonstrate advanced API capabilities.</li>
+                    <li>Automated complex workflows with Python scripts, streamlining data processing and content generation.</li>
+                    <li>Integrated leading LLMs (Gemini, Grok, GPT) into MarTech stacks for measurable efficiency gains.</li>
+                </ul>
+            </div>
+            <div class="glass-card job">
+                <h3>Advertising & Marketing Manager</h3>
+                <p>SandShark Anchor – Plymouth, IN | Mar 2010 – Apr 2023</p>
+                <ul>
+                    <li>Led strategic pivot to Amazon dominance, scaling brand to $3M+ annual revenue.</li>
+                    <li>Managed full FBA lifecycle, inventory forecasting, and Buy Box optimization.</li>
+                    <li>Served as sole creative director, producing high-conversion assets in Adobe Suite.</li>
+                </ul>
+            </div>
+            <div class="glass-card job">
+                <h3>Internet eCommerce Director</h3>
+                <p>Kenwood Dealer Group – Cincinnati, OH | Nov 2012 – Jan 2020</p>
+                <ul>
+                    <li>Consolidated 15 dealership systems into unified tech stack.</li>
+                    <li>Built digital infrastructure from ground up, centralizing $5.5M budget.</li>
+                    <li>Migrated $2.7M ad spend in-house, achieving $356k annual savings.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="glass-card skills-grid">
+                <div class="skill-item"><strong>AI / Machine Learning</strong><br>Vertex AI, Gemini, Grok, GPT, LLM Integration</div>
+                <div class="skill-item"><strong>Cloud Platforms</strong><br>Google Cloud Platform, Architecture Design</div>
+                <div class="skill-item"><strong>Development</strong><br>Python, Visual Studio, Automation Scripting</div>
+                <div class="skill-item"><strong>MarTech & eCommerce</strong><br>Amazon Seller Central, FBA, Adobe Creative Suite</div>
+            </div>
+        </section>
 
         <section id="portfolio">
             <h2 class="section-title">Project & Demo</h2>
@@ -196,6 +590,159 @@
         </div>
     </footer>
 
-    <!-- Canvas script unchanged -->
+    <script>
+        const canvas = document.getElementById('background');
+        const ctx = canvas.getContext('2d');
+        let particlesArray = [];
+        let parallaxOffset = 0;
+        let numberOfParticles = window.innerWidth > 768 ? 100 : 60;
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        window.addEventListener('scroll', () => {
+            parallaxOffset = window.pageYOffset * 0.5;
+        });
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            numberOfParticles = window.innerWidth > 768 ? 100 : 60;
+            initParticles();
+        });
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height * 0.4;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.3 - 0.15;
+                this.brightness = Math.random() * 0.4;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+                if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = `rgba(0,255,255,${0.3 + this.brightness})`;
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = '#00ffff';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particlesArray = [];
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function drawMountainLayer(offset, color, lineWidth, baseYRatio, amp) {
+            const baseY = canvas.height * baseYRatio;
+            ctx.strokeStyle = color;
+            ctx.lineWidth = lineWidth;
+            ctx.shadowBlur = 15 + lineWidth * 3;
+            ctx.shadowColor = '#00cccc';
+
+            const numPoints = 14;
+            ctx.beginPath();
+            ctx.moveTo(-100, canvas.height);
+
+            for (let i = 0; i <= numPoints; i++) {
+                const progress = i / numPoints;
+                const centerDist = Math.abs(progress - 0.5);
+                let sideHeight = centerDist * 2.4;
+                sideHeight = Math.pow(sideHeight, 1.3);
+                sideHeight += Math.sin(progress * Math.PI * 4) * 0.2;
+                const y = baseY - amp * sideHeight + Math.sin(progress * 8 + offset) * 15;
+                ctx.lineTo(progress * canvas.width - offset * 0.5, y);
+            }
+
+            ctx.lineTo(canvas.width + 100, canvas.height);
+            ctx.lineTo(-100, canvas.height);
+            ctx.closePath();
+            ctx.stroke();
+
+            ctx.lineWidth = lineWidth * 0.6;
+            for (let i = 1; i < numPoints; i += 2) {
+                const progress = i / numPoints;
+                const x = progress * canvas.width - offset * 0.5;
+                const centerDist = Math.abs(progress - 0.5);
+                let sideHeight = centerDist * 2.4;
+                sideHeight = Math.pow(sideHeight, 1.3);
+                sideHeight += Math.sin(progress * Math.PI * 4) * 0.2;
+                const peakY = baseY - amp * sideHeight + Math.sin(progress * 8 + offset) * 15;
+
+                ctx.beginPath();
+                ctx.moveTo(x, peakY);
+                ctx.lineTo(x, canvas.height);
+                ctx.stroke();
+            }
+        }
+
+        function drawLake(offset) {
+            const lakeTop = canvas.height * 0.68;
+
+            const waterGrad = ctx.createLinearGradient(0, lakeTop, 0, canvas.height);
+            waterGrad.addColorStop(0, 'rgba(0,200,200,0.08)');
+            waterGrad.addColorStop(1, 'rgba(0,30,60,0.6)');
+            ctx.fillStyle = waterGrad;
+            ctx.fillRect(0, lakeTop - 40, canvas.width, canvas.height - lakeTop + 80);
+
+            ctx.strokeStyle = '#00cccc';
+            ctx.lineWidth = 4;
+            ctx.shadowBlur = 30;
+            ctx.shadowColor = '#00cccc';
+            ctx.beginPath();
+            const waveAmp = 12;
+            ctx.moveTo(0, lakeTop);
+            for (let x = 0; x <= canvas.width; x += 10) {
+                const y = lakeTop + Math.sin(x * 0.008 + offset * 0.05) * waveAmp;
+                ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+
+            ctx.save();
+            ctx.globalAlpha = 0.25;
+            ctx.filter = 'blur(10px)';
+            ctx.translate(0, lakeTop * 2);
+            ctx.scale(1, -1);
+            drawMountainLayer(offset * 1.2, '#00cccc33', 2, 0.45, 180);
+            ctx.restore();
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const skyGrad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            skyGrad.addColorStop(0, '#0a0f1e');
+            skyGrad.addColorStop(0.4, '#030813');
+            skyGrad.addColorStop(1, '#00040e');
+            ctx.fillStyle = skyGrad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            drawMountainLayer(parallaxOffset * 0.1, '#00cccc08', 1, 0.75, 100);
+            drawMountainLayer(parallaxOffset * 0.3, '#00cccc22', 2, 0.58, 160);
+            drawMountainLayer(parallaxOffset * 0.6, '#00cccc55', 3, 0.45, 220);
+
+            drawLake(parallaxOffset);
+
+            particlesArray.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        initParticles();
+        animate();
+    </script>
 </body>
 </html>
