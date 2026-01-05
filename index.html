@@ -12,7 +12,7 @@
             --cyan-glow: #00f0f0;
             --purple: #8a2be2;
             --dark: #0a0e1a;
-            --glass: rgba(5, 15, 35, 0.6); /* Darker glass for better text contrast */
+            --glass: rgba(5, 15, 35, 0.6);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -54,6 +54,16 @@
             padding: 12px 40px;
             border: 1px solid rgba(0,255,255,0.2);
             box-shadow: 0 8px 32px rgba(0,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .nav-logo {
+            height: 55px;
+            width: auto;
+            filter: drop-shadow(0 0 20px var(--cyan));
         }
 
         nav ul {
@@ -89,35 +99,40 @@
         nav a:hover::after { width: 100%; }
 
         header {
-            height: 100vh;
+            padding: 140px 20px 80px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
         }
 
-        .hero-logo {
+        .hero-swan {
             width: 180px;
-            margin-bottom: 40px;
-            filter: drop-shadow(0 0 25px var(--cyan));
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 30px var(--cyan));
         }
 
-        .profile-pic {
-            width: 220px;
-            height: 220px;
+        .name-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .name-profile {
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--cyan);
             box-shadow: 0 0 50px var(--cyan-glow);
-            margin-bottom: 40px;
         }
 
         h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 5.5rem;
-            margin-bottom: 20px;
+            font-size: 5rem;
+            margin: 0;
             background: linear-gradient(90deg, var(--cyan), #ffffff, var(--cyan));
             background-size: 200%;
             -webkit-background-clip: text;
@@ -148,7 +163,7 @@
         }
 
         section {
-            padding: 120px 0;
+            padding: 100px 0;
         }
 
         h2.section-title {
@@ -193,18 +208,53 @@
 
         .glass-card:hover::before { opacity: 1; }
 
+        .contact-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            padding: 60px;
+            text-align: left;
+        }
+
+        .contact-logo {
+            width: 280px;
+            filter: drop-shadow(0 0 40px var(--cyan));
+        }
+
+        .contact-text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0,0,0,0.7);
+        }
+
+        .contact-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            text-shadow: 0 0 10px rgba(0,0,0,0.7);
+        }
+
+        /* Existing styles for job, skills, portfolio (unchanged) */
         .job h3, .skill-item strong, .demo-overlay h3 {
             font-family: 'Orbitron', sans-serif;
             color: var(--cyan);
             text-shadow: 0 0 20px var(--cyan-glow);
         }
 
-        /* Additional text shadow for better pop */
         p, li, .skill-item {
             text-shadow: 0 0 10px rgba(0,0,0,0.7);
         }
 
-        /* Rest of styles unchanged for brevity */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .skill-item { background: rgba(0,255,255,0.05); padding: 20px; border-radius: 15px; text-align: center; border: 1px solid rgba(0,255,255,0.2); transition: all 0.4s; }
         .skill-item:hover { background: rgba(0,255,255,0.1); box-shadow: 0 0 30px rgba(0,255,255,0.3); }
@@ -216,40 +266,29 @@
         .demo-card:hover .demo-overlay { transform: translateY(0); }
         .demo-overlay a { color: var(--cyan); text-decoration: none; font-weight: 600; }
 
-        footer {
-            padding: 100px 0 60px;
-            text-align: center;
-        }
-
-        .footer-logo {
-            width: 280px;
-            margin-bottom: 40px;
-            filter: drop-shadow(0 0 40px var(--cyan));
-        }
-
-        footer p {
-            opacity: 0.8;
-            font-size: 1.1rem;
-            margin: 15px 0;
-        }
-
         @media (max-width: 1024px) {
-            h1 { font-size: 4rem; }
-            nav ul { gap: 25px; }
-            .profile-pic { width: 180px; height: 180px; }
-            .hero-logo { width: 140px; }
+            h1 { font-size: 4.2rem; }
+            nav { gap: 40px; padding: 12px 30px; }
+            .nav-logo { height: 50px; }
+            .name-row { gap: 30px; }
+            .name-profile { width: 160px; height: 160px; }
+            .hero-swan { width: 160px; }
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 3.2rem; }
+            header { padding: 120px 20px 60px; }
+            h1 { font-size: 3.5rem; }
             header h2 { font-size: 1.8rem; }
-            nav { padding: 10px 20px; }
+            nav { gap: 20px; padding: 10px 20px; }
             nav ul { gap: 15px; font-size: 0.9rem; }
+            .nav-logo { height: 45px; }
             section { padding: 80px 0; }
             .glass-card { padding: 25px; }
-            .profile-pic { width: 150px; height: 150px; }
-            .hero-logo { width: 120px; }
-            .footer-logo { width: 220px; }
+            .name-row { flex-direction: column; gap: 20px; }
+            .name-profile { width: 140px; height: 140px; }
+            .hero-swan { width: 130px; margin-bottom: 20px; }
+            .contact-card { flex-direction: column; gap: 40px; padding: 40px; text-align: center; }
+            .contact-logo { width: 220px; }
         }
     </style>
 </head>
@@ -257,6 +296,9 @@
     <canvas id="background"></canvas>
 
     <nav>
+        <a href="#home">
+            <img src="images/swan-lake-digital-mascot-512x.png" alt="Swan Lake Digital Logo" class="nav-logo">
+        </a>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -268,32 +310,99 @@
 
     <div class="container">
         <header id="home">
-            <img src="images/swan-lake-digital-mascot-512x.png" alt="Swan Lake Digital Logo" class="hero-logo">
-            <img src="images/mikedsayre-profile.png" alt="Mike Sayre Profile" class="profile-pic">
-            <h1>Mike Sayre</h1>
+            <img src="images/swan-lake-digital-mascot-512x.png" alt="Swan Lake Digital Logo" class="hero-swan">
+            <div class="name-row">
+                <img src="images/mikedsayre-profile.png" alt="Mike Sayre" class="name-profile">
+                <h1>Mike Sayre</h1>
+            </div>
             <h2>Solutions Architect & AI Strategist</h2>
             <p>Architecting intelligent systems that bridge visionary business goals with cutting-edge technical execution.</p>
         </header>
 
-        <!-- Experience, Skills, Portfolio sections unchanged from previous version -->
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="glass-card job">
+                <h3>Principal Solutions Architect & AI Strategist</h3>
+                <p>Swan Lake Digital Consulting | Feb 2023 – Present</p>
+                <ul>
+                    <li>Designed and deployed custom AI applications on Google Cloud Platform (Vertex AI, Gemini).</li>
+                    <li>Built functional prototypes in Python/Visual Studio to demonstrate advanced API capabilities.</li>
+                    <li>Automated complex workflows with Python scripts, streamlining data processing and content generation.</li>
+                    <li>Integrated leading LLMs (Gemini, Grok, GPT) into MarTech stacks for measurable efficiency gains.</li>
+                </ul>
+            </div>
+            <div class="glass-card job">
+                <h3>Advertising & Marketing Manager</h3>
+                <p>SandShark Anchor – Plymouth, IN | Mar 2010 – Apr 2023</p>
+                <ul>
+                    <li>Led strategic pivot to Amazon dominance, scaling brand to $3M+ annual revenue.</li>
+                    <li>Managed full FBA lifecycle, inventory forecasting, and Buy Box optimization.</li>
+                    <li>Served as sole creative director, producing high-conversion assets in Adobe Suite.</li>
+                </ul>
+            </div>
+            <div class="glass-card job">
+                <h3>Internet eCommerce Director</h3>
+                <p>Kenwood Dealer Group – Cincinnati, OH | Nov 2012 – Jan 2020</p>
+                <ul>
+                    <li>Consolidated 15 dealership systems into unified tech stack.</li>
+                    <li>Built digital infrastructure from ground up, centralizing $5.5M budget.</li>
+                    <li>Migrated $2.7M ad spend in-house, achieving $356k annual savings.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="glass-card skills-grid">
+                <div class="skill-item"><strong>AI / Machine Learning</strong><br>Vertex AI, Gemini, Grok, GPT, LLM Integration</div>
+                <div class="skill-item"><strong>Cloud Platforms</strong><br>Google Cloud Platform, Architecture Design</div>
+                <div class="skill-item"><strong>Development</strong><br>Python, Visual Studio, Automation Scripting</div>
+                <div class="skill-item"><strong>MarTech & eCommerce</strong><br>Amazon Seller Central, FBA, Adobe Creative Suite</div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2 class="section-title">Projects & Demos</h2>
+            <div class="portfolio-grid">
+                <div class="glass-card demo-card">
+                    <img src="images/demo1.jpg" alt="AI Prototype">
+                    <div class="demo-overlay">
+                        <h3>AI Workflow Prototype</h3>
+                        <p>Custom Vertex AI + Gemini integration demo</p>
+                        <a href="#">View Live →</a>
+                    </div>
+                </div>
+                <div class="glass-card demo-card">
+                    <img src="images/demo2.jpg" alt="Automation Tool">
+                    <div class="demo-overlay">
+                        <h3>Python Automation Suite</h3>
+                        <p>Streamlined data pipeline and content generation</p>
+                        <a href="#">View Live →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="contact">
             <h2 class="section-title">Contact</h2>
-            <div class="glass-card">
-                <p>Available for consulting, AI strategy advisory, and technical architecture projects.</p>
-                <p>Email: [your-email] | LinkedIn: linkedin.com/in/mikedsayre</p>
+            <div class="glass-card contact-card">
+                <img src="images/swan-lake-digital-mascot-512x.png" alt="Swan Lake Digital Mascot" class="contact-logo">
+                <div class="contact-text">
+                    <p>Available for consulting, AI strategy advisory, and technical architecture projects.</p>
+                    <p>Email: [your-email] | LinkedIn: linkedin.com/in/mikedsayre</p>
+                </div>
             </div>
         </section>
     </div>
 
     <footer>
         <div class="container">
-            <img src="images/swan-lake-digital-mascot-512x.png" alt="Swan Lake Digital Mascot" class="footer-logo">
             <p>© 2026 Swan Lake Digital Consulting. All rights reserved.</p>
             <p>Bridging Business & Technology with AI Innovation</p>
         </div>
     </footer>
 
+    <!-- Canvas script unchanged from previous version -->
     <script>
         const canvas = document.getElementById('background');
         const ctx = canvas.getContext('2d');
@@ -305,7 +414,7 @@
         canvas.height = window.innerHeight;
 
         window.addEventListener('scroll', () => {
-            parallaxOffset = window.pageYOffset * 0.5; // Slower parallax for subtle scroll wave
+            parallaxOffset = window.pageYOffset * 0.5;
         });
 
         window.addEventListener('resize', () => {
@@ -362,9 +471,9 @@
                 const progress = i / numPoints;
                 const centerDist = Math.abs(progress - 0.5);
                 let sideHeight = centerDist * 2.4;
-                sideHeight = Math.pow(sideHeight, 1.3); // Softer curve
-                sideHeight += Math.sin(progress * Math.PI * 4) * 0.2; // Gentle rolling hills
-                const y = baseY - amp * sideHeight + Math.sin(progress * 8 + offset) * 15; // Reduced jaggedness
+                sideHeight = Math.pow(sideHeight, 1.3);
+                sideHeight += Math.sin(progress * Math.PI * 4) * 0.2;
+                const y = baseY - amp * sideHeight + Math.sin(progress * 8 + offset) * 15;
                 ctx.lineTo(progress * canvas.width - offset * 0.5, y);
             }
 
@@ -373,7 +482,6 @@
             ctx.closePath();
             ctx.stroke();
 
-            // Thinner, subtler wireframe lines
             ctx.lineWidth = lineWidth * 0.6;
             for (let i = 1; i < numPoints; i += 2) {
                 const progress = i / numPoints;
@@ -394,14 +502,12 @@
         function drawLake(offset) {
             const lakeTop = canvas.height * 0.68;
 
-            // Darker, subtler water
             const waterGrad = ctx.createLinearGradient(0, lakeTop, 0, canvas.height);
             waterGrad.addColorStop(0, 'rgba(0,200,200,0.08)');
             waterGrad.addColorStop(1, 'rgba(0,30,60,0.6)');
             ctx.fillStyle = waterGrad;
             ctx.fillRect(0, lakeTop - 40, canvas.width, canvas.height - lakeTop + 80);
 
-            // Softer glowing wave
             ctx.strokeStyle = '#00cccc';
             ctx.lineWidth = 4;
             ctx.shadowBlur = 30;
@@ -415,7 +521,6 @@
             }
             ctx.stroke();
 
-            // Subtle reflection
             ctx.save();
             ctx.globalAlpha = 0.25;
             ctx.filter = 'blur(10px)';
@@ -428,7 +533,6 @@
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Darker sky
             const skyGrad = ctx.createLinearGradient(0, 0, 0, canvas.height);
             skyGrad.addColorStop(0, '#0a0f1e');
             skyGrad.addColorStop(0.4, '#030813');
@@ -436,10 +540,9 @@
             ctx.fillStyle = skyGrad;
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            // Softer, lower hills with reduced glow
-            drawMountainLayer(parallaxOffset * 0.1, '#00cccc08', 1, 0.75, 100); // distant
-            drawMountainLayer(parallaxOffset * 0.3, '#00cccc22', 2, 0.58, 160); // mid
-            drawMountainLayer(parallaxOffset * 0.6, '#00cccc55', 3, 0.45, 220); // foreground hills
+            drawMountainLayer(parallaxOffset * 0.1, '#00cccc08', 1, 0.75, 100);
+            drawMountainLayer(parallaxOffset * 0.3, '#00cccc22', 2, 0.58, 160);
+            drawMountainLayer(parallaxOffset * 0.6, '#00cccc55', 3, 0.45, 220);
 
             drawLake(parallaxOffset);
 
