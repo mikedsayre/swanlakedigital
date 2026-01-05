@@ -3,940 +3,544 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swan Lake Digital - Mike Sayre | Solutions Architect & AI Strategist</title>
-    <link rel="icon" type="image/x-icon" href="images/swan-lake-digital-mascot-favicon-ai-developer-builder-64x.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="A responsive, single-page portfolio website for Swan Lake Digital, showcasing services as a Senior Solutions Architect & AI Strategist and professional experience for recruiters. Specializing in Rapid Prototyping, Workflow Automation, Generative Media, and E-Commerce Strategy with expertise in Google Vertex AI, Python, and React.">
-    <meta name="keywords" content="Mike Sayre, Swan Lake Digital, Solutions Architect, AI Strategist, Rapid Prototyping, Workflow Automation, Generative Media, E-Commerce Strategy, Google Vertex AI, Python, Visual Studio Code, Prompt Engineering, React, Vercel, Frontend Developer, UI/UX, Portfolio, Consultant, Technical Implementation, LLM, Gemini, ChatGPT, Google Veo, E-commerce Ecosystems, CRM Architecture">
-    <meta name="author" content="Mike Sayre">
-    <meta name="robots" content="index, follow">
-    <!-- Replace with your actual domain -->
-    <link rel="canonical" href="https://www.swanlakedigital.com/">
-
-    <!-- Open Graph / Facebook / LinkedIn -->
-    <meta property="og:type" content="website">
-    <!-- Replace with your actual domain -->
-    <meta property="og:url" content="https://www.swanlakedigital.com/">
-    <meta property="og:title" content="Swan Lake Digital - Mike Sayre | Solutions Architect & AI Strategist">
-    <meta property="og:description" content="A responsive, single-page portfolio website for Swan Lake Digital, showcasing services as a Senior Solutions Architect & AI Strategist and professional experience for recruiters. Specializing in Rapid Prototyping, Workflow Automation, Generative Media, and E-Commerce Strategy with expertise in Google Vertex AI, Python, and React.">
-    <!-- Replace with a URL to your social sharing image (e.g., logo or banner) -->
-    <meta property="og:image" content="https://www.swanlakedigital.com/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <!-- Replace with your Twitter handle (e.g., @mikedsayre) -->
-    <meta property="twitter:url" content="https://www.swanlakedigital.com/">
-    <meta property="twitter:title" content="Swan Lake Digital - Mike Sayre | Solutions Architect & AI Strategist">
-    <meta property="twitter:description" content="A responsive, single-page portfolio website for Swan Lake Digital, showcasing services as a Senior Solutions Architect & AI Strategist and professional experience for recruiters. Specializing in Rapid Prototyping, Workflow Automation, Generative Media, and E-Commerce Strategy with expertise in Google Vertex AI, Python, and React.">
-    <!-- Replace with a URL to your social sharing image (e.g., logo or banner) -->
-    <meta property="twitter:image" content="https://www.swanlakedigital.com/og-image.jpg">
-
+    <title>Mike Sayre | Solutions Architect & AI Strategist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #0A1128;
-            --secondary-blue: #1B3B6F;
-            --accent-blue: #64CCDA;
-            --light-grey: #F0F2F5;
-            --white: #FFFFFF;
-            --dark-text: #333;
-            --light-text: #E0E0E0;
-            --gradient-start: #060a18; /* Darkened for lake effect */
-            --gradient-end: #0f2a4f;   /* Darkened for lake effect */
-            --site-bg-dark: #080c1b; /* Even darker for global body background */
+            --cyan: #00ffff;
+            --cyan-glow: #00f0f0;
+            --purple: #8a2be2;
+            --dark: #0a0e1a;
+            --glass: rgba(10, 20, 40, 0.45);
         }
 
-        /* Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: var(--light-text);
-            background-color: var(--site-bg-dark);
-            scroll-behavior: smooth;
+            color: #e0f0ff;
+            background: #000814;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--white);
-            margin-top: 0;
-        }
-
-        a {
-            color: var(--accent-blue);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--secondary-blue);
+        canvas#background {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+            pointer-events: none;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        section {
-            padding: 40px 20px;
-            margin-bottom: 0;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        section.fade-in-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
+            position: relative;
+            z-index: 3;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
-        }
-
-        .logo .local-asset {
-            height: 40px;
-            margin-right: 10px;
-        }
-
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 30px;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-blue);
-            transform: scale(1.05);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .hamburger span {
-            height: 3px;
-            width: 25px;
-            background-color: var(--white);
-            margin-bottom: 5px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        /* CTA Buttons (Moved here as Hero is removed) */
-        .cta-button {
-            background-color: var(--accent-blue);
-            color: var(--primary-blue);
-            padding: 15px 30px;
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
             border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 12px 40px;
+            border: 1px solid rgba(0,255,255,0.2);
+            box-shadow: 0 8px 32px rgba(0,255,255,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav a {
+            color: #e0f0ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--cyan);
+            text-shadow: 0 0 15px var(--cyan);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cyan);
+            transition: width 0.4s;
+        }
+
+        nav a:hover::after { width: 100%; }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 5.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--cyan), #ffffff, var(--cyan));
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientFlow 8s ease infinite;
+            text-shadow: 0 0 30px rgba(0,255,255,0.5);
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0%; }
+            100% { background-position: 200%; }
+        }
+
+        header h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--cyan);
+            text-shadow: 0 0 20px var(--cyan-glow);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 120px 0;
+        }
+
+        h2.section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 80px;
+            background: linear-gradient(to right, var(--cyan), #a0f0ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(0,255,255,0.3);
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(25px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            border: 1px solid rgba(0,255,255,0.3);
+            box-shadow: 0 10px 40px rgba(0,255,255,0.15);
+            transition: all 0.5s ease;
             position: relative;
             overflow: hidden;
-            border: none;
-            cursor: pointer;
         }
 
-        .cta-button:hover {
-            background-color: #50B6C5;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(0,255,255,0.08), transparent);
+            opacity: 0;
+            transition: opacity 0.5s;
         }
 
-        .cta-button.main-cta:hover {
-            animation: pulse-glow 1.5s infinite;
+        .glass-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0,255,255,0.4);
         }
 
-        @keyframes pulse-glow {
-            0% {
-                box-shadow: 0 0 0 0 rgba(100, 204, 218, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 20px rgba(100, 204, 218, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(100, 204, 218, 0);
-            }
-        }
+        .glass-card:hover::before { opacity: 1; }
 
-        /* About Section (The "Tech Bridge" Philosophy) */
-        .about {
-            background-color: var(--primary-blue);
-            text-align: center;
-            padding-top: 60px; /* Adjusted to give some space after header */
-            padding-bottom: 40px;
-        }
-
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.15rem;
-            color: var(--light-text);
-        }
-
-        .about-content .local-asset {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .about-content .headline-group {
-            margin-bottom: 25px; /* Spacing for the headline/sub-headline */
-        }
-
-        .about-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            color: var(--white);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            line-height: 1.2;
-        }
-
-        .about-content h4 {
+        .job h3 {
+            font-family: 'Orbitron', sans-serif;
             font-size: 1.8rem;
-            color: var(--light-text);
-            margin-bottom: 0px; /* Adjusted from 25px */
-            font-weight: 400;
+            color: var(--cyan);
+            margin-bottom: 10px;
         }
 
-        .about-content .about-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 20px; /* Space between text and buttons */
+        .job p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+            font-style: italic;
         }
 
-        .about-content .secondary-button {
-            background-color: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        ul {
+            padding-left: 25px;
         }
 
-        .about-content .secondary-button:hover {
-            background-color: var(--white);
-            color: var(--primary-blue);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        li {
+            margin-bottom: 15px;
+            line-height: 1.6;
         }
 
-
-        /* Services Section */
-        .services {
-            background-color: var(--secondary-blue);
-            text-align: center;
-        }
-
-        .services h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: var(--white);
-        }
-
-        .service-cards {
+        .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .service-card {
-            background-color: rgba(255, 255, 255, 0.08);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .service-card i {
-            font-size: 3.5rem;
-            color: var(--accent-blue);
-            margin-bottom: 15px;
-        }
-
-        .service-card h3 {
-            font-size: 1.6rem;
-            margin-bottom: 8px;
-            color: var(--accent-blue);
-        }
-
-        .service-card p {
-            font-size: 1rem;
-            color: var(--light-text);
-        }
-
-        /* Experience Section */
-        .experience {
-            background-color: var(--primary-blue);
-        }
-
-        .experience h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: var(--white);
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: var(--accent-blue);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-            background-color: transparent;
-        }
-
-        .timeline-item-content {
-            background-color: rgba(255, 255, 255, 0.08);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            position: relative;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .timeline-item-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background-color: var(--accent-blue);
-            border: 4px solid var(--primary-blue);
-            top: 25px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .left-item {
-            left: 0;
-            padding-right: 60px;
-        }
-
-        .right-item {
-            left: 50%;
-            padding-left: 60px;
-        }
-
-        .right-item::after {
-            left: -10px;
-        }
-
-        .timeline-item h3 {
-            font-size: 1.5rem;
-            color: var(--accent-blue);
-            margin-bottom: 5px;
-        }
-
-        .timeline-item p.duration {
-            font-style: italic;
-            color: var(--light-text);
-            margin-bottom: 5px;
-        }
-
-        .timeline-item ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .timeline-item ul li {
-            position: relative;
-            margin-bottom: 8px;
-            padding-left: 25px;
-            color: var(--light-text);
-        }
-
-        .timeline-item ul li::before {
-            content: "\f00c";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            color: var(--accent-blue);
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        /* Tech Stack Marquee */
-        .tech-stack {
-            background-color: var(--primary-blue);
-            color: var(--white);
-            overflow: hidden;
-            padding: 40px 0;
-        }
-
-        .tech-stack h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-
-        .marquee-container {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            padding: 10px 0;
-        }
-
-        .marquee-content {
-            display: inline-block;
-            animation: marquee 20s linear infinite;
-            padding-right: 50px;
-        }
-
-        .marquee-content span {
-            display: inline-block;
-            background-color: var(--secondary-blue);
-            color: var(--white);
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .marquee-content span:hover {
-            background-color: var(--accent-blue);
-            transform: scale(1.05);
-            color: var(--primary-blue);
-        }
-
-        .marquee-content:nth-child(2) {
-            animation-delay: -20s;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-blue);
-            color: var(--light-text);
-            padding: 25px 20px;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            display: flex;
             gap: 25px;
-            margin-top: 15px;
         }
 
-        .footer-links a {
-            color: var(--white);
-            font-size: 1.8rem;
-            transition: color 0.3s ease, transform 0.3s ease;
+        .skill-item {
+            background: rgba(0,255,255,0.05);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(0,255,255,0.2);
+            transition: all 0.4s;
         }
 
-        .footer-links a:hover {
-            color: var(--accent-blue);
-            transform: scale(1.1);
+        .skill-item:hover {
+            background: rgba(0,255,255,0.1);
+            box-shadow: 0 0 30px rgba(0,255,255,0.3);
         }
 
-        footer p {
-            margin-top: 10px;
-            font-size: 0.9rem;
+        .skill-item strong {
+            color: var(--cyan);
+            font-size: 1.2rem;
         }
 
-        /* Responsive Adjustments */
-        @media (max-width: 900px) {
-            .about h1 {
-                font-size: 2.8rem;
-            }
-            .about h4 {
-                font-size: 1.5rem;
-            }
-            .timeline::after {
-                left: 20px;
-            }
-            .timeline-item {
-                width: 100%;
-                padding-left: 60px;
-                padding-right: 15px;
-            }
-            .timeline-item::after {
-                left: 10px;
-            }
-            .left-item, .right-item {
-                left: 0;
-            }
-            .left-item::after {
-                left: 10px;
-            }
-            .right-item::after {
-                left: 10px;
-            }
-            .service-cards {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .demo-card {
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            transition: all 0.5s;
+        }
+
+        .demo-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+
+        .demo-card:hover img { transform: scale(1.1); }
+
+        .demo-overlay {
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(10,20,40,0.9), transparent);
+            transform: translateY(50px);
+            transition: transform 0.5s;
+        }
+
+        .demo-card:hover .demo-overlay { transform: translateY(0); }
+
+        .demo-overlay h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyan);
+            margin-bottom: 10px;
+        }
+
+        .demo-overlay a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1024px) {
+            h1 { font-size: 4rem; }
+            nav ul { gap: 25px; }
         }
 
         @media (max-width: 768px) {
-            .navbar {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .logo {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 15px;
-                justify-content: center;
-            }
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                background-color: var(--primary-blue);
-                padding-top: 10px;
-                text-align: center;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .nav-links li {
-                margin: 10px 0;
-            }
-            .hamburger {
-                display: flex;
-                position: absolute;
-                right: 20px;
-                top: 25px;
-            }
-            .hamburger.active span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
-            .hamburger.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(5px, -5px);
-            }
-            .about {
-                padding: 50px 20px; /* Adjusted for mobile */
-            }
-            .about h1 {
-                font-size: 2.2rem;
-            }
-            .about h4 {
-                font-size: 1.2rem;
-            }
-            .about-content .about-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            .cta-button, .about-content .secondary-button {
-                width: 80%;
-                max-width: 300px;
-            }
-            section {
-                padding: 40px 15px;
-            }
-            h2 {
-                font-size: 2rem;
-            }
-            .timeline-item ul li {
-                font-size: 0.95rem;
-            }
-            .marquee-content span {
-                font-size: 1rem;
-                padding: 10px 20px;
-            }
-            .footer-links {
-                gap: 15px;
-            }
-            .footer-links a {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .about h1 {
-                font-size: 1.8rem;
-            }
-            .about h4 {
-                font-size: 1rem;
-            }
-            h2 {
-                font-size: 1.8rem;
-            }
-            .service-card h3 {
-                font-size: 1.4rem;
-            }
-            .timeline-item h3 {
-                font-size: 1.3rem;
-            }
+            h1 { font-size: 3.2rem; }
+            header h2 { font-size: 1.8rem; }
+            nav { padding: 10px 20px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+            section { padding: 80px 0; }
+            .glass-card { padding: 25px; }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="#about" class="logo">
-                <img src="images/swan-lake-digital-mascot-512x.png" alt="Swan Lake Logo" class="local-asset">
-                Swan Lake Digital
-            </a>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="https://slangbot-demo.vercel.app/" target="_blank" rel="noopener noreferrer">Live Demos</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <canvas id="background"></canvas>
 
-    <main>
-        <!-- About Section (The "Tech Bridge" Philosophy) -->
-        <section id="about" class="about fade-in">
-            <div class="container">
-                <div class="about-content">
-                    <div class="headline-group">
-                        <h1>Bridging the Gap Between Business Goals & Technical Execution.</h1>
-                        <h4>Mike Sayre | Senior Solutions Architect & AI Strategist.</h4>
-                    </div>
-                    <img src="images/mikedsayre-profile.png" alt="Mike Headshot" class="local-asset">
-                    <p>As a Senior Solutions Architect & Technical Implementation Strategist, I act as a "Technical Bridge" between executive stakeholders and development teams. With over 20 years of experience, I excel in translating complex business goals into scalable technical solutions, driving multimillion-dollar growth by aligning technical capabilities with customer success. My expertise lies in Rapid Prototyping and Workflow Automation, utilizing Visual Studio, Python, and Vertex AI to build custom integrations that solve critical business bottlenecks.</p>
-                    <div class="about-buttons">
-                        <a href="https://slangbot-demo.vercel.app/" target="_blank" rel="noopener noreferrer" class="cta-button main-cta">
-                            <i class="fas fa-robot"></i> Try Slangbot (Live AI Demo)
-                        </a>
-                        <a href="#experience" class="secondary-button">
-                            View Resume
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <!-- Services Section -->
-        <section id="services" class="services fade-in">
-            <div class="container">
-                <h2>Services for Clients</h2>
-                <div class="service-cards">
-                    <div class="service-card">
-                        <i class="fas fa-rocket"></i>
-                        <h3>Rapid Prototyping</h3>
-                        <p>Quickly bring your innovative ideas to life with functional prototypes, demonstrating API capabilities and market viability.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Workflow Automation</h3>
-                        <p>Streamline your operations and enhance efficiency by automating complex workflows and data processes with custom scripts and integrations.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-paint-brush"></i>
-                        <h3>Generative Media</h3>
-                        <p>Leverage cutting-edge AI for content creation, from prompt engineering for LLMs to orchestrating advanced workflows for high-fidelity commercial assets.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-shopping-cart"></i>
-                        <h3>E-Commerce Strategy</h3>
-                        <p>Optimize your online presence with expert guidance on Amazon Seller Central, Shopify, BigCommerce, and robust logistics & inventory forecasting.</p>
-                    </div>
-                </div>
+    <div class="container">
+        <header id="home">
+            <h1>Mike Sayre</h1>
+            <h2>Solutions Architect & AI Strategist</h2>
+            <p>Architecting intelligent systems that bridge visionary business goals with cutting-edge technical execution.</p>
+        </header>
+
+        <section id="experience">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="glass-card job">
+                <h3>Principal Solutions Architect & AI Strategist</h3>
+                <p>Swan Lake Digital Consulting | Feb 2023 – Present</p>
+                <ul>
+                    <li>Designed and deployed custom AI applications on Google Cloud Platform (Vertex AI, Gemini).</li>
+                    <li>Built functional prototypes in Python/Visual Studio to demonstrate advanced API capabilities.</li>
+                    <li>Automated complex workflows with Python scripts, streamlining data processing and content generation.</li>
+                    <li>Integrated leading LLMs (Gemini, Grok, GPT) into MarTech stacks for measurable efficiency gains.</li>
+                </ul>
+            </div>
+            <div class="glass-card job">
+                <h3>Advertising & Marketing Manager</h3>
+                <p>SandShark Anchor – Plymouth, IN | Mar 2010 – Apr 2023</p>
+                <ul>
+                    <li>Led strategic pivot to Amazon dominance, scaling brand to $3M+ annual revenue.</li>
+                    <li>Managed full FBA lifecycle, inventory forecasting, and Buy Box optimization.</li>
+                    <li>Served as sole creative director, producing high-conversion assets in Adobe Suite.</li>
+                </ul>
+            </div>
+            <div class="glass-card job">
+                <h3>Internet eCommerce Director</h3>
+                <p>Kenwood Dealer Group – Cincinnati, OH | Nov 2012 – Jan 2020</p>
+                <ul>
+                    <li>Consolidated 15 dealership systems into unified tech stack.</li>
+                    <li>Built digital infrastructure from ground up, centralizing $5.5M budget.</li>
+                    <li>Migrated $2.7M ad spend in-house, achieving $356k annual savings.</li>
+                </ul>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="experience fade-in">
-            <div class="container">
-                <h2>Professional Experience</h2>
-                <div class="timeline">
-                    <!-- Swan Lake Digital Consulting -->
-                    <div class="timeline-item left-item">
-                        <div class="timeline-item-content">
-                            <h3>Principal Solutions Architect & AI Strategist</h3>
-                            <p class="duration">Swan Lake Digital Consulting | Feb 2023 – Present</p>
-                            <ul>
-                                <li>Architected and deployed custom AI-powered applications using Google Cloud Platform (Vertex AI) and Google AI Studio.</li>
-                                <li>Utilized Visual Studio and Python to build functional prototypes to demonstrate API capabilities to stakeholders.</li>
-                                <li>Solved complex workflow bottlenecks by writing Python scripts to automate data retrieval and content generation.</li>
-                                <li>Integrated diverse LLMs (Gemini, Grok, ChatGPT) into existing MarTech stacks, reducing operational overhead.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- SandShark Anchor -->
-                    <div class="timeline-item right-item">
-                        <div class="timeline-item-content">
-                            <h3>Advertising & Marketing Manager</h3>
-                            <p class="duration">SandShark Anchor – Plymouth, IN | Mar 2010 – Apr 2023</p>
-                            <ul>
-                                <li>Orchestrated a massive strategic pivot to Amazon Marketplace dominance, fueling brand's explosion to $3M+ in annual revenue.</li>
-                                <li>Mastered Amazon Seller Central, managing FBA logistics, inventory forecasting, and Buy Box strategies.</li>
-                                <li>Served as sole creative lead, utilizing Adobe Photoshop and video editing tools to design high-conversion assets.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Kenwood Dealer Group -->
-                    <div class="timeline-item left-item">
-                        <div class="timeline-item-content">
-                            <h3>Internet eCommerce Director</h3>
-                            <p class="duration">Kenwood Dealer Group – Cincinnati, OH | Nov 2012 – Jan 2020</p>
-                            <ul>
-                                <li>Consolidated 15 disparate store systems (CRM, Inventory, Website) into a single tech stack.</li>
-                                <li>Built the group's digital infrastructure from the ground up, centralizing a fragmented $5.5M budget.</li>
-                                <li>Personally managed transition of $2.7M in ad spend from agencies to in-house, saving $356k/year.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <section id="skills">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="glass-card skills-grid">
+                <div class="skill-item"><strong>AI / Machine Learning</strong><br>Vertex AI, Gemini, Grok, GPT, LLM Integration</div>
+                <div class="skill-item"><strong>Cloud Platforms</strong><br>Google Cloud Platform, Architecture Design</div>
+                <div class="skill-item"><strong>Development</strong><br>Python, Visual Studio, Automation Scripting</div>
+                <div class="skill-item"><strong>MarTech & eCommerce</strong><br>Amazon Seller Central, FBA, Adobe Creative Suite</div>
             </div>
         </section>
 
-        <!-- Tech Stack Marquee Section -->
-        <section id="tech-stack" class="tech-stack fade-in">
-            <div class="container">
-                <h2>My Core Competencies & Technical Stack</h2>
-                <div class="marquee-container">
-                    <div class="marquee-content">
-                        <span>Google Vertex AI</span>
-                        <span>Python</span>
-                        <span>Visual Studio Code</span>
-                        <span>Prompt Engineering</span>
-                        <span>React</span>
-                        <span>Vercel</span>
-                        <span>Firebase Hosting</span>
-                        <span>OpenAI API</span>
-                        <span>LLM Application Design</span>
-                        <span>Google Gemini (Pro/Ultra)</span>
-                        <span>ChatGPT</span>
-                        <span>Leonardo.ai</span>
-                        <span>Midjourney</span>
-                        <span>Google Veo</span>
-                        <span>E-commerce Ecosystems</span>
-                        <span>CRM Architecture</span>
-                    </div>
-                    <!-- Duplicate content for seamless loop -->
-                    <div class="marquee-content">
-                        <span>Google Vertex AI</span>
-                        <span>Python</span>
-                        <span>Visual Studio Code</span>
-                        <span>Prompt Engineering</span>
-                        <span>React</span>
-                        <span>Vercel</span>
-                        <span>Firebase Hosting</span>
-                        <span>OpenAI API</span>
-                        <span>LLM Application Design</span>
-                        <span>Google Gemini (Pro/Ultra)</span>
-                        <span>ChatGPT</span>
-                        <span>Leonardo.ai</span>
-                        <span>Midjourney</span>
-                        <span>Google Veo</span>
-                        <span>E-commerce Ecosystems</span>
-                        <span>CRM Architecture</span>
+        <section id="portfolio">
+            <h2 class="section-title">Projects & Demos</h2>
+            <div class="portfolio-grid">
+                <div class="glass-card demo-card">
+                    <img src="images/demo1.jpg" alt="AI Prototype">
+                    <div class="demo-overlay">
+                        <h3>AI Workflow Prototype</h3>
+                        <p>Custom Vertex AI + Gemini integration demo</p>
+                        <a href="#">View Live →</a>
                     </div>
                 </div>
+                <div class="glass-card demo-card">
+                    <img src="images/demo2.jpg" alt="Automation Tool">
+                    <div class="demo-overlay">
+                        <h3>Python Automation Suite</h3>
+                        <p>Streamlined data pipeline and content generation</p>
+                        <a href="#">View Live →</a>
+                    </div>
+                </div>
+                <!-- Add more as needed -->
             </div>
         </section>
-    </main>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-content">
-            <h3>Let's Connect!</h3>
-            <p>Ready to bridge your business goals with technical execution? Feel free to reach out.</p>
-            <p>Phone: (513) 646-6767 | Location: Plymouth, IN</p>
-            <p>Key Achievement: "Driving multimillion-dollar growth by aligning technical capabilities with customer success."</p>
-            <ul class="footer-links">
-                <li><a href="https://linkedin.com/in/mikedsayre" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/mikedsayre" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
-                <li><a href="mailto:sayremd@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
-            </ul>
-            <p>&copy; Copyright 2026 Mike Sayre. All rights reserved.</p>
-        </div>
-    </footer>
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="glass-card">
+                <p>Available for consulting, AI strategy advisory, and technical architecture projects.</p>
+                <p>Email: [your-email] | LinkedIn: linkedin.com/in/mikedsayre</p>
+            </div>
+        </section>
+    </div>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const headerOffset = document.querySelector('header').offsetHeight;
-                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                    const offsetPosition = elementPosition - headerOffset;
+        const canvas = document.getElementById('background');
+        const ctx = canvas.getContext('2d');
+        let particlesArray = [];
+        let parallaxOffset = 0;
+        let numberOfParticles = window.innerWidth > 768 ? 100 : 60;
 
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
-                }
-            });
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        window.addEventListener('scroll', () => {
+            parallaxOffset = window.pageYOffset;
         });
 
-        // Hamburger menu toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            numberOfParticles = window.innerWidth > 768 ? 100 : 60;
+            initParticles();
         });
 
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                // Close menu after clicking a link (on mobile)
-                if (window.innerWidth <= 768) {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('active');
-                }
-            });
-        });
-
-        // Scroll-triggered fade-in animations
-        const faders = document.querySelectorAll('.fade-in');
-
-        const appearOptions = {
-            threshold: 0.3,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
-        const appearOnScroll = new IntersectionObserver(function(
-            entries,
-            appearOnScroll
-        ) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
-                    entry.target.classList.add('fade-in-visible');
-                    appearOnScroll.unobserve(entry.target);
-                }
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            if (fader.id === 'about') { // Make the about section visible immediately
-                fader.classList.add('fade-in-visible');
-            } else {
-                appearOnScroll.observe(fader);
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height * 0.5; // mostly in sky
+                this.size = Math.random() * 3 + 1;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.3 - 0.15;
+                this.brightness = Math.random();
             }
-        });
-
-        // Marquee duplication for seamless loop (optional, CSS animation handles primary loop)
-        document.addEventListener('DOMContentLoaded', () => {
-            const marqueeContainer = document.querySelector('.marquee-container');
-            const marqueeContent = document.querySelector('.marquee-content');
-
-            if (marqueeContent && marqueeContainer) {
-                const clone = marqueeContent.cloneNode(true);
-                marqueeContainer.appendChild(clone);
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width || this.x < 0) this.speedX *= -1;
+                if (this.y > canvas.height || this.y < 0) this.speedY *= -1;
             }
-        });
+            draw() {
+                ctx.fillStyle = `rgba(0,255,255,${0.5 + this.brightness * 0.5})`;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = '#00ffff';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particlesArray = [];
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function drawMountainLayer(offset, color, lineWidth, baseYRatio, amp) {
+            const baseY = canvas.height * baseYRatio;
+            ctx.strokeStyle = color;
+            ctx.lineWidth = lineWidth;
+            ctx.shadowBlur = 30 + lineWidth * 5;
+            ctx.shadowColor = '#00ffff';
+
+            const numPoints = 12;
+            ctx.beginPath();
+            ctx.moveTo(-200, canvas.height);
+
+            for (let i = 0; i <= numPoints; i++) {
+                const progress = i / numPoints;
+                const x = progress * canvas.width;
+                // High on sides, lower middle for valley/lake
+                const sideHeight = Math.min(progress * 2, (1 - progress) * 2) * 2;
+                const y = baseY - amp * sideHeight + Math.sin(progress * 8) * 30; // jagged
+                ctx.lineTo(x - offset, y);
+            }
+
+            ctx.lineTo(canvas.width + 200, canvas.height);
+            ctx.lineTo(-200, canvas.height);
+            ctx.stroke();
+
+            // Wireframe internal lines (vertical + diagonal)
+            for (let i = 1; i < numPoints; i++) {
+                const progress = i / numPoints;
+                const peakX = progress * canvas.width - offset;
+                const sideHeight = Math.min(progress * 2, (1 - progress) * 2) * 2;
+                const peakY = baseY - amp * sideHeight + Math.sin(progress * 8) * 30;
+
+                // Vertical
+                ctx.beginPath();
+                ctx.moveTo(peakX, peakY);
+                ctx.lineTo(peakX, canvas.height);
+                ctx.stroke();
+
+                // Diagonal
+                ctx.beginPath();
+                ctx.moveTo(peakX, peakY);
+                ctx.lineTo(peakX + 150 * (i % 2 ? 1 : -1), canvas.height);
+                ctx.stroke();
+            }
+        }
+
+        function drawLake(offset) {
+            const lakeTopAvg = canvas.height * 0.65;
+
+            // Water fill
+            const waterGrad = ctx.createLinearGradient(0, lakeTopAvg, 0, canvas.height);
+            waterGrad.addColorStop(0, 'rgba(0,255,255,0.15)');
+            waterGrad.addColorStop(1, 'rgba(0,20,50,0.7)');
+            ctx.fillStyle = waterGrad;
+            ctx.fillRect(0, lakeTopAvg - 50, canvas.width, canvas.height - lakeTopAvg + 100);
+
+            // Glowing wave surface
+            ctx.strokeStyle = '#00ffff';
+            ctx.lineWidth = 8;
+            ctx.shadowBlur = 50;
+            ctx.shadowColor = '#00ffff';
+            ctx.beginPath();
+            const waveAmp = 20;
+            const waveFreq = 0.008;
+            ctx.moveTo(0, lakeTopAvg);
+            for (let x = 0; x <= canvas.width; x += 8) {
+                const y = lakeTopAvg + Math.sin(x * waveFreq + offset * 0.03) * waveAmp;
+                ctx.lineTo(x, y);
+            }
+            ctx.stroke();
+
+            // Blurred reflection
+            ctx.save();
+            ctx.globalAlpha = 0.35;
+            ctx.filter = 'blur(12px)';
+            ctx.translate(0, lakeTopAvg * 2);
+            ctx.scale(1, -1);
+            drawMountainLayer(offset * 1.1, '#00ffff44', 4, 0.4, 300); // front-ish
+            drawMountainLayer(offset * 1.1, '#00ffff22', 3, 0.55, 200);
+            ctx.restore();
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Sky gradient
+            const skyGrad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            skyGrad.addColorStop(0, '#0f172a');
+            skyGrad.addColorStop(0.4, '#020817');
+            skyGrad.addColorStop(1, '#000411');
+            ctx.fillStyle = skyGrad;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Mountain layers with parallax
+            drawMountainLayer(parallaxOffset * 0.15, '#00ffff11', 2, 0.7, 120); // distant
+            drawMountainLayer(parallaxOffset * 0.35, '#00ffff44', 4, 0.55, 220); // mid
+            drawMountainLayer(parallaxOffset * 0.7, '#00ffffaa', 6, 0.4, 320); // foreground
+
+            // Lake + reflection + wave
+            drawLake(parallaxOffset);
+
+            // Particles (stars / energy)
+            particlesArray.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        initParticles();
+        animate();
     </script>
 </body>
 </html>
