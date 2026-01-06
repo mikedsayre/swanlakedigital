@@ -1,8 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 
-// Using arbitrary values for CSS properties that Tailwind doesn't have direct utilities for
-// or would require extensive configuration that falls outside the scope of single file generation.
-
 export const BackgroundAnimation: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationFrameId = useRef<number | null>(null);
