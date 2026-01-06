@@ -1,5 +1,8 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 
+// Using arbitrary values for CSS properties that Tailwind doesn't have direct utilities for
+// or would require extensive configuration that falls outside the scope of single file generation.
+
 export const BackgroundAnimation: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationFrameId = useRef<number | null>(null);
@@ -77,6 +80,62 @@ export const BackgroundAnimation: React.FC = () => {
     }
   }, [numberOfParticles]);
 
+  // drawMountainLayer function is no longer used, but kept for reference if needed in the future.
+  const drawMountainLayer = useCallback(
+    (
+      ctx: CanvasRenderingContext2D,
+      canvas: HTMLCanvasElement,
+      offset: number,
+      color: string,
+      lineWidth: number,
+      baseYRatio: number,
+      amp: number,
+      shadowColor: string,
+    ) => {
+      const baseY = canvas.height * baseYRatio;
+      ctx.strokeStyle = color;
+      ctx.lineWidth = lineWidth;
+      ctx.shadowBlur = 15 + lineWidth * 3;
+      ctx.shadowColor = shadowColor;
+
+      const numPoints = 14;
+      ctx.beginPath();
+      ctx.moveTo(-100, canvas.height);
+
+      for (let i = 0; i <= numPoints; i++) {
+        const progress = i / numPoints;
+        const centerDist = Math.abs(progress - 0.5);
+        let sideHeight = centerDist * 2.4;
+        sideHeight = Math.pow(sideHeight, 1.3);
+        sideHeight += Math.sin(progress * Math.PI * 4) * 0.2;
+        const y = baseY - amp * sideHeight + Math.sin(progress * 8 + offset) * 15;
+        ctx.lineTo(progress * canvas.width - offset * 0.5, y);
+      }
+
+      ctx.lineTo(canvas.width + 100, canvas.height);
+      ctx.lineTo(-100, canvas.height);
+      ctx.closePath();
+      ctx.stroke();
+
+      ctx.lineWidth = lineWidth * 0.6;
+      for (let i = 1; i < numPoints; i += 2) {
+        const progress = i / numPoints;
+        const x = progress * canvas.width - offset * 0.5;
+        const centerDist = Math.abs(progress - 0.5);
+        let sideHeight = centerDist * 2.4;
+        sideHeight = Math.pow(sideHeight, 1.3);
+        sideHeight += Math.sin(progress * Math.PI * 4) * 0.2;
+        const peakY = baseY - amp * sideHeight + Math.sin(progress * 8 + offset) * 15;
+
+        ctx.beginPath();
+        ctx.moveTo(x, peakY);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+    },
+    [],
+  );
+
   const drawLake = useCallback(
     (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, offset: number) => {
       const lakeTop = canvas.height * 0.68;
@@ -99,8 +158,10 @@ export const BackgroundAnimation: React.FC = () => {
         ctx.lineTo(x, y);
       }
       ctx.stroke();
+
+      // Removed mountain reflection
     },
-    [],
+    [], // drawMountainLayer is no longer a dependency here
   );
 
   const animate = useCallback(() => {
@@ -118,6 +179,11 @@ export const BackgroundAnimation: React.FC = () => {
     skyGrad.addColorStop(1, '#000000'); // Darkened
     ctx.fillStyle = skyGrad;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Removed mountain layers
+    // drawMountainLayer(ctx, canvas, parallaxOffset * 0.1, '#00cccc20', 1, 0.75, 100, '#00cccc');
+    // drawMountainLayer(ctx, canvas, parallaxOffset * 0.3, '#00cccc40', 2, 0.58, 160, '#00cccc');
+    // drawMountainLayer(ctx, canvas, parallaxOffset * 0.6, '#00cccc70', 3, 0.45, 220, '#00cccc');
 
     drawLake(ctx, canvas, parallaxOffset);
 
