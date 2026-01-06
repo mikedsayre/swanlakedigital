@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 
 // Using arbitrary values for CSS properties that Tailwind doesn't have direct utilities for
@@ -103,10 +102,8 @@ export const BackgroundAnimation: React.FC = () => {
         ctx.lineTo(x, y);
       }
       ctx.stroke();
-
-      // Removed mountain reflection
     },
-    [], // drawMountainLayer is no longer a dependency here
+    [],
   );
 
   const animate = useCallback(() => {
