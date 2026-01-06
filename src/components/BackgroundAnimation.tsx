@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 
 // Using arbitrary values for CSS properties that Tailwind doesn't have direct utilities for
