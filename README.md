@@ -1,4 +1,4 @@
-# 🦢 Swan Lake Digital – Personal Portfolio & AI Showcase
+# 🚀 Swan Lake Digital – Personal Portfolio & AI Showcase
 
 ![Swan Lake Digital Hero](https://swanlakedigital.vercel.app/images/swan-lake-digital-mascot-512x.png)
 
