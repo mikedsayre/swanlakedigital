@@ -3,7 +3,6 @@ import { Navbar } from './components/Navbar';
 import { BackgroundAnimation } from './components/BackgroundAnimation';
 import { SectionTitle } from './components/SectionTitle';
 import { GlassCard } from './components/GlassCard';
-import { SkillListItem } from './components/SkillListItem';
 import { Footer } from './components/Footer';
 import { HorizontalWaveSeparator } from './components/HorizontalWaveSeparator';
 import { IMAGES } from './constants';
