@@ -26,14 +26,14 @@ const App: React.FC = () => {
               className="w-32 h-32 md:w-52 md:h-52 rounded-full object-cover border-4 border-cyan-400 shadow-[0_0_50px_#00f0f0] flex-shrink-0 order-1 md:order-2 min-w-32 min-h-32 mb-5 md:mb-0"
             />
           </div>
-          <div className="mt-4 bg-glass px-6 py-3 rounded-lg border border-cyan-800/30 self-start">
-            <h2 className="font-orbitron text-xl sm:text-2xl md:text-3xl text-cyan-300 drop-shadow-cyan-heading">
+         <div className="mt-4 bg-glass px-6 py-4 rounded-lg border border-cyan-800/30 self-start max-w-4xl">
+            <h2 className="font-orbitron text-xl sm:text-2xl md:text-3xl text-cyan-300 drop-shadow-cyan-heading mb-2">
               Senior MarTech & AI Strategist
             </h2>
-          </div>
-          <p className="text-base sm:text-lg md:text-xl max-w-4xl opacity-90 text-shadow-cyan-medium mb-10">
+            <p className="text-base sm:text-lg md:text-xl opacity-90 text-shadow-cyan-medium">
             <strong>Bridging Vision with Velocity:</strong> Dynamic MarTech leader and AI strategist with over 20 years of experience bridging traditional digital marketing/eCommerce with emerging AI technologies. Proven in translating business goals into scalable AI-driven solutions—automating workflows, optimizing operations, and driving revenue growth. Expert in rapid prototyping, generative AI for content/media, and MarTech stack integration. Acts as a "technical bridge" for stakeholders, delivering cost-effective, high-impact transformations in remote/hybrid environments.
-          </p>
+            </p>
+          </div>
         </header>
 
         <HorizontalWaveSeparator />
