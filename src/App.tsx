@@ -27,10 +27,10 @@ const App: React.FC = () => {
             />
           </div>
           <h2 className="font-orbitron text-xl sm:text-2xl md:text-3xl mb-5 text-orange-400 drop-shadow-orange-glow">
-            Senior Solutions Architect & AI Strategist
+            Senior MarTech & AI Strategist
           </h2>
           <p className="text-base sm:text-lg md:text-xl max-w-4xl opacity-90 text-shadow-cyan-medium mb-10">
-            <strong>Bridging Vision with Velocity:</strong> I architect intelligent systems that translate complex business goals into cutting-edge technical execution. With over two decades of experience, I empower organizations to innovate faster, optimize operations, and drive substantial growth through strategic AI integration and rapid prototyping.
+            <strong>Bridging Vision with Velocity:</strong> Dynamic MarTech leader and AI strategist with over 20 years of experience bridging traditional digital marketing/eCommerce with emerging AI technologies. Proven in translating business goals into scalable AI-driven solutions—automating workflows, optimizing operations, and driving revenue growth. Expert in rapid prototyping, generative AI for content/media, and MarTech stack integration. Acts as a "technical bridge" for stakeholders, delivering cost-effective, high-impact transformations in remote/hybrid environments.
           </p>
         </header>
 
@@ -42,10 +42,10 @@ const App: React.FC = () => {
             <img src={IMAGES.SWAN_LAKE_MASCOT_512} alt="Swan Lake Digital Logo" className="w-40 md:w-52 drop-shadow-orange-strong" />
             <div className="text-left">
               <p className="text-base md:text-lg mb-4 text-shadow">
-                As a Senior Solutions Architect, my core mission is to act as the "Technical Bridge" between executive stakeholders and development teams. I specialize in translating complex business goals into scalable technical solutions, designing and implementing custom integrations that resolve critical business bottlenecks.
+                As a Senior MarTech & AI Strategist, my core mission is to act as the "Technical Bridge" between executive stakeholders and development teams. I specialize in translating complex business goals into scalable technical solutions, designing and implementing custom integrations that resolve critical business bottlenecks.
               </p>
               <p className="text-base md:text-lg text-shadow">
-                My proven track record in rapid prototyping, workflow automation, and advanced AI strategy (utilizing Visual Studio, Python, and Vertex AI) consistently drives multimillion-dollar growth by aligning technical capabilities directly with customer success. I'm dedicated to delivering innovative, high-impact solutions that move businesses forward.
+                My proven track record in rapid prototyping, workflow automation, and advanced AI strategy (utilizing Visual Studio, Python, and Vertex AI) consistently drives revenue growth by aligning technical capabilities directly with customer success. I'm dedicated to delivering innovative, high-impact solutions that move businesses forward.
               </p>
             </div>
           </GlassCard>
@@ -139,19 +139,19 @@ const App: React.FC = () => {
               <ul className="mt-5 list-none">
                 <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
                   <i className="fa-solid fa-circle text-orange-400 text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Architected and deployed custom AI-powered applications on Google Cloud Platform (Vertex AI, Google AI Studio, Gemini) and OpenAI API.</span>
+                  <span>Architected AI-enhanced MarTech solutions using Google Cloud (Vertex AI) and Google AI Studio to automate content generation and workflows, enabling clients to scale campaigns efficiently.</span>
                 </li>
                 <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
                   <i className="fa-solid fa-circle text-cyan-400 text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Built functional prototypes in Python/Visual Studio, rapidly demonstrating advanced API capabilities and market viability to stakeholders.</span>
+                  <span>Developed Python prototypes and scripts to bridge operational gaps, demonstrating AI capabilities and reducing manual processes.</span>
                 </li>
                 <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
                   <i className="fa-solid fa-circle text-orange-400 text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Spearheaded generative media production, orchestrating advanced workflows across Leonardo.ai, Ideogram, Veo, and Midjourney for high-fidelity commercial assets.</span>
+                  <span>Integrated LLMs (Gemini, Grok, ChatGPT) into existing marketing stacks, cutting operational overhead and accelerating time-to-market.</span>
                 </li>
                 <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
                   <i className="fa-solid fa-circle text-cyan-400 text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Leveraged prompt engineering (Chain-of-Thought, Few-Shot) to maximize LLM performance (Gemini Pro/Ultra, Grok, ChatGPT) in diverse applications.</span>
+                  <span>Orchestrated generative media workflows (Leonardo.ai, Ideogram, Veo, Midjourney) to create high-impact commercial assets, boosting engagement and conversions.</span>
                 </li>
               </ul>
             </GlassCard>
@@ -230,38 +230,28 @@ const App: React.FC = () => {
           <div className="grid grid-cols-1 gap-5 md:gap-6">
             <SkillListItem
               icon="fa-solid fa-microchip text-orange-400"
-              title="AI & LLMs"
-              description="Vertex AI, Google AI Studio, Gemini (Pro/Ultra), Grok, ChatGPT, OpenAI API, LLM Application Design, Prompt Engineering (Chain-of-Thought, Few-Shot)"
+              title="AI & Automation"
+              description="Google Gemini (Pro/Ultra) • Google AI Studio • Vertex AI (Model Tuning & Deployment) • OpenAI API • Prompt Engineering (Chain-of-Thought, Few-Shot) • Grok • ChatGPT • Leonardo.ai • Ideogram.ai • Midjourney • Google Veo (AI Video) • Sora (AI Video) • No-Code/Low-Code Tools (Zapier)"
             />
             <SkillListItem
               icon="fa-solid fa-cloud text-cyan-400"
-              title="Cloud & Hosting"
-              description="Google Cloud Platform, Firebase Hosting, API Management, Cloud Architecture Design"
+              title="Development & Prototyping"
+              description="Python (Scripting, PoCs, Automation) • Visual Studio Code/IDE • PowerShell • Firebase Hosting • API Integration & Management • HTML5/CSS/JavaScript/PHP"
             />
             <SkillListItem
               icon="fa-solid fa-code text-orange-400"
-              title="Development & Automation"
-              description="Python, Visual Studio Code, Scripting (PoCs), Rapid Prototyping, Custom Integrations"
+              title="MarTech & Analytics"
+              description="Google Ads/Analytics/Tag Manager/Marketing Platform • Meta Business Suite • SEO/SEM/PPC • YouTube Video Advertising • Social Media Strategy (Facebook, Instagram, TikTok, X/Twitter) • Marketing Automation • Audience Targeting • Data Visualization & Reporting • Email Marketing"
             />
             <SkillListItem
               icon="fa-solid fa-robot text-cyan-400"
-              title="Generative Media"
-              description="Leonardo.ai, Ideogram, Midjourney, Google Veo, Adobe Creative Suite (Photoshop, Video Editing)"
+              title="eCommerce & Operations"
+              description="Amazon Seller Central (Expert) • BigCommerce • Shopify • Miva Merchant • Inventory Forecasting & Logistics • CRM & SaaS Expertise (Rapid Adoption & Integration)"
             />
             <SkillListItem
               icon="fa-solid fa-store text-orange-400"
-              title="E-Commerce Platforms"
-              description="Amazon Seller Central (Expert), FBA, Shopify, BigCommerce, Miva Merchant, Logistics & Inventory Forecasting"
-            />
-            <SkillListItem
-              icon="fa-solid fa-chart-line text-cyan-400"
-              title="Marketing & CRM"
-              description="MarTech Stack Integration, CRM Architecture, Pipeline Management, Reseller Channel Management, Sales Enablement, SEO/vSEO Strategy"
-            />
-            <SkillListItem
-              icon="fa-solid fa-laptop-code text-orange-400"
-              title="Frontend & Deployment"
-              description="React, Vercel, HTML5, CSS3, JavaScript"
+              title="Professional Skills"
+              description="Multichannel Campaign Strategy • ROI Optimization • Vendor/Partnership Management • Remote Collaboration • Process Improvement • Sales Enablement & Revenue Growth • Cost-Benefit Analysis • Digital Transformation Consulting • AI Ethics & Responsible AI • Agile Methodologies"
             />
           </div>
         </section>
