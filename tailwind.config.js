@@ -13,12 +13,14 @@ export default {
       colors: {
         cyan: {
           DEFAULT: '#00ffff',
-          'glow': '#00f0f0',
+          glow: '#00f0f0',
+          400: '#00ffff',
         },
         orange: {
-          DEFAULT: '#ff6f00',     // Vibrant primary orange
-          glow: '#ff8c33',        // Softer glowing variant for hovers/shadows
-          '400': '#ff9e00',       // Additional shade for flexibility
+          DEFAULT: '#ff6f00',     // Vibrant amber-orange
+          glow: '#ff8c33',
+          400: '#ff9e00',
+          500: '#ff6f00',
         },
         dark: '#0a0e1a',
         glass: 'rgba(5, 15, 35, 0.6)',
@@ -38,7 +40,7 @@ export default {
         'cyan-glow-light': '0 0 15px #00f0f0',
         'cyan-glow-medium': '0 0 30px #00f0f0',
         'cyan-glow-strong': '0 0 40px #00ffff',
-        'orange-glow': '0 0 30px #ff8c33',        // New orange glow shadow
+        'orange-glow': '0 0 30px #ff8c33',
         'orange-strong': '0 0 40px #ff6f00',
       },
       textShadow: {
@@ -49,37 +51,21 @@ export default {
         'cyan-title': '0 0 30px rgba(0,255,255,0.4)',
         'cyan-heading': '0 0 30px #00f0f0',
         'cyan-subheading': '0 0 20px #00f0f0',
-        'orange-glow': '0 0 30px #ff8c33',       // New orange text shadow
+        'orange-glow': '0 0 30px #ff8c33',
       }
     },
   },
   plugins: [
     function ({ addUtilities, theme }) {
       const newUtilities = {
-        '.text-shadow': {
-          textShadow: theme('textShadow.DEFAULT'),
-        },
-        '.text-shadow-cyan-light': {
-          textShadow: theme('textShadow.cyan-light'),
-        },
-        '.text-shadow-cyan-medium': {
-          textShadow: theme('textShadow.cyan-medium'),
-        },
-        '.text-shadow-cyan-strong': {
-          textShadow: theme('textShadow.cyan-strong'),
-        },
-        '.text-shadow-cyan-title': {
-          textShadow: theme('textShadow.cyan-title'),
-        },
-        '.text-shadow-cyan-heading': {
-          textShadow: theme('textShadow.cyan-heading'),
-        },
-        '.text-shadow-cyan-subheading': {
-          textShadow: theme('textShadow.cyan-subheading'),
-        },
-        '.text-shadow-orange-glow': {            // New utility
-          textShadow: theme('textShadow.orange-glow'),
-        },
+        '.text-shadow': { textShadow: theme('textShadow.DEFAULT') },
+        '.text-shadow-cyan-light': { textShadow: theme('textShadow.cyan-light') },
+        '.text-shadow-cyan-medium': { textShadow: theme('textShadow.cyan-medium') },
+        '.text-shadow-cyan-strong': { textShadow: theme('textShadow.cyan-strong') },
+        '.text-shadow-cyan-title': { textShadow: theme('textShadow.cyan-title') },
+        '.text-shadow-cyan-heading': { textShadow: theme('textShadow.cyan-heading') },
+        '.text-shadow-cyan-subheading': { textShadow: theme('textShadow.cyan-subheading') },
+        '.text-shadow-orange-glow': { textShadow: theme('textShadow.orange-glow') },
       };
       addUtilities(newUtilities, ['responsive', 'hover']);
     },
