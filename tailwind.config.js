@@ -14,13 +14,11 @@ export default {
         cyan: {
           DEFAULT: '#00ffff',
           glow: '#00f0f0',
-          400: '#00ffff',
         },
         orange: {
-          DEFAULT: '#ff6f00',     // Vibrant amber-orange
+          DEFAULT: '#ff6f00',
           glow: '#ff8c33',
-          400: '#ff9e00',
-          500: '#ff6f00',
+          dark: '#d97706', // Slightly darker orange for titles, icons, bullets
         },
         dark: '#0a0e1a',
         glass: 'rgba(5, 15, 35, 0.6)',
@@ -41,7 +39,7 @@ export default {
         'cyan-glow-medium': '0 0 30px #00f0f0',
         'cyan-glow-strong': '0 0 40px #00ffff',
         'orange-glow': '0 0 30px #ff8c33',
-        'orange-strong': '0 0 40px #ff6f00',
+        'orange-strong': '0 0 20px #d97706', // For darker orange glow
       },
       textShadow: {
         DEFAULT: '0 0 10px rgba(0,0,0,0.7)',
@@ -51,21 +49,41 @@ export default {
         'cyan-title': '0 0 30px rgba(0,255,255,0.4)',
         'cyan-heading': '0 0 30px #00f0f0',
         'cyan-subheading': '0 0 20px #00f0f0',
-        'orange-glow': '0 0 30px #ff8c33',
+        'orange-glow': '0 0 30px #d97706',
+        'orange-subheading': '0 0 15px #d97706', // New for subheadings
       }
     },
   },
   plugins: [
     function ({ addUtilities, theme }) {
       const newUtilities = {
-        '.text-shadow': { textShadow: theme('textShadow.DEFAULT') },
-        '.text-shadow-cyan-light': { textShadow: theme('textShadow.cyan-light') },
-        '.text-shadow-cyan-medium': { textShadow: theme('textShadow.cyan-medium') },
-        '.text-shadow-cyan-strong': { textShadow: theme('textShadow.cyan-strong') },
-        '.text-shadow-cyan-title': { textShadow: theme('textShadow.cyan-title') },
-        '.text-shadow-cyan-heading': { textShadow: theme('textShadow.cyan-heading') },
-        '.text-shadow-cyan-subheading': { textShadow: theme('textShadow.cyan-subheading') },
-        '.text-shadow-orange-glow': { textShadow: theme('textShadow.orange-glow') },
+        '.text-shadow': {
+          textShadow: theme('textShadow.DEFAULT'),
+        },
+        '.text-shadow-cyan-light': {
+          textShadow: theme('textShadow.cyan-light'),
+        },
+        '.text-shadow-cyan-medium': {
+          textShadow: theme('textShadow.cyan-medium'),
+        },
+        '.text-shadow-cyan-strong': {
+          textShadow: theme('textShadow.cyan-strong'),
+        },
+        '.text-shadow-cyan-title': {
+          textShadow: theme('textShadow.cyan-title'),
+        },
+        '.text-shadow-cyan-heading': {
+          textShadow: theme('textShadow.cyan-heading'),
+        },
+        '.text-shadow-cyan-subheading': {
+          textShadow: theme('textShadow.cyan-subheading'),
+        },
+        '.text-shadow-orange-glow': {
+          textShadow: theme('textShadow.orange-glow'),
+        },
+        '.text-shadow-orange-subheading': { // New utility
+          textShadow: theme('textShadow.orange-subheading'),
+        },
       };
       addUtilities(newUtilities, ['responsive', 'hover']);
     },
