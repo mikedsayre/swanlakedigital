@@ -2,6 +2,7 @@ import React from 'react';
 
 interface SkillListItemProps {
   icon: string;
+  children: React.ReactNode;
 }
 
 export const SkillListItem: React.FC<SkillListItemProps> = ({ icon, children }) => {
