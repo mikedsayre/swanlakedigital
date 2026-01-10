@@ -16,42 +16,25 @@ const App: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto px-5">
         <header id="home" className="py-24 md:py-28 px-5 flex flex-col items-center text-center min-h-[80vh] justify-center">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-12 mb-7 flex-wrap">
-            <h1 className="font-orbitron text-4xl sm:text-5xl md:text-6xl lg:text-7xl m-0 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-[length:200%] bg-clip-text text-transparent animate-gradientFlow drop-shadow-cyan-strong order-2 md:order-1 whitespace-normal mb-5 md:mb-0 leading-[1.3] lg:leading-[1.5] pb-2 lg:pb-6">
-              Mike Sayre
-            </h1>
+          <div className="flex flex-col items-center justify-center gap-6 md:gap-8 mb-7">
             <img
-              src={IMAGES.PROFILE_HEADSHOT}
-              alt="Mike Sayre Headshot"
-              className="w-32 h-32 md:w-52 md:h-52 rounded-full object-cover border-4 border-cyan-400 shadow-[0_0_50px_#00f0f0] flex-shrink-0 order-1 md:order-2 min-w-32 min-h-32 mb-5 md:mb-0"
+              src={IMAGES.SWAN_LAKE_MASCOT_512}
+              alt="Swan Lake Digital Mascot"
+              className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover border-4 border-cyan-400 shadow-[0_0_50px_#00f0f0] flex-shrink-0"
             />
+            <h1 className="font-orbitron text-4xl sm:text-5xl md:text-6xl lg:text-7xl m-0 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-[length:200%] bg-clip-text text-transparent animate-gradientFlow drop-shadow-cyan-strong whitespace-normal leading-[1.3] lg:leading-[1.5] pb-2 lg:pb-6">
+              Swan Lake Digital
+            </h1>
           </div>
-         <div className="mt-4 bg-glass px-6 py-4 rounded-lg border border-cyan-800/30 self-start max-w-4xl">
+          <div className="mt-4 bg-glass px-6 py-4 rounded-lg border border-cyan-800/30 max-w-4xl">
             <h2 className="font-orbitron text-xl sm:text-2xl md:text-3xl text-cyan-300 drop-shadow-cyan-heading mb-2">
-              Senior MarTech & AI Strategist
+              AI-Powered Innovation for Your Business
             </h2>
             <p className="text-base sm:text-lg md:text-xl opacity-90 text-shadow-cyan-medium">
-            <strong>Bridging Vision with Velocity:</strong> Dynamic MarTech leader and AI strategist with over 20 years of experience bridging traditional digital marketing/eCommerce with emerging AI technologies. Proven in translating business goals into scalable AI-driven solutions—automating workflows, optimizing operations, and driving revenue growth. Expert in rapid prototyping, generative AI for content/media, and MarTech stack integration. Acts as a "technical bridge" for stakeholders, delivering cost-effective, high-impact transformations in remote/hybrid environments.
+              At Swan Lake Digital, we harness AI to rapidly prototype and launch custom apps and websites that tackle your business bottlenecks. Our intuitive designs make tools fun and efficient, streamlining operations without unnecessary hassle or stress—delivering real-world solutions faster than ever.
             </p>
           </div>
         </header>
-
-        <HorizontalWaveSeparator />
-
-        <section id="about" className="py-8 md:py-10">
-          <SectionTitle>The 'Tech Bridge' Philosophy: Connecting Vision to Reality</SectionTitle>
-          <GlassCard className="flex flex-col items-center justify-center gap-10 md:gap-16 p-10 md:p-16">
-            <img src={IMAGES.SWAN_LAKE_MASCOT_512} alt="Swan Lake Digital Logo" className="w-40 md:w-52 drop-shadow-cyan-strong" />
-            <div className="text-left">
-              <p className="text-base md:text-lg mb-4 text-shadow">
-                As a Senior MarTech & AI Strategist, my core mission is to act as the "Technical Bridge" between executive stakeholders and development teams. I specialize in translating complex business goals into scalable technical solutions, designing and implementing custom integrations that resolve critical business bottlenecks.
-              </p>
-              <p className="text-base md:text-lg text-shadow">
-                My proven track record in rapid prototyping, workflow automation, and advanced AI strategy (utilizing Visual Studio, Python, and Vertex AI) consistently drives revenue growth by aligning technical capabilities directly with customer success. I'm dedicated to delivering innovative, high-impact solutions that move businesses forward.
-              </p>
-            </div>
-          </GlassCard>
-        </section>
 
         <HorizontalWaveSeparator />
 
@@ -215,19 +198,15 @@ const App: React.FC = () => {
               <ul className="mt-5 list-none">
                 <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
                   <i className="fa-solid fa-circle text-orange-dark text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Led strategic pivots to Amazon Marketplace dominance, scaling brands to multi-million dollar annual revenues.</span>
+                  <span>Led e-commerce platform migrations and optimizations, resulting in significant revenue increases through improved user experiences and data-driven strategies.</span>
                 </li>
                 <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
                   <i className="fa-solid fa-circle text-orange-dark text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Expertly managed Amazon Seller Central ecosystems, including FBA logistics, inventory forecasting, brand registry, and Buy Box strategies.</span>
+                  <span>Directed Shopify Plus implementations with custom apps, headless commerce, and ERP/CRM integrations for multi-million dollar operations.</span>
                 </li>
                 <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
                   <i className="fa-solid fa-circle text-orange-dark text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Developed proprietary "Video SEO" algorithms for #1 Google rankings and launched "Print + Digital" bundles, driving consistent top 10 national online revenue.</span>
-                </li>
-                <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
-                  <i className="fa-solid fa-circle text-orange-dark text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Provided comprehensive e-commerce strategy for platforms like BigCommerce, Shopify, and Miva Merchant.</span>
+                  <span>Optimized omnichannel retail strategies, blending online and physical store experiences to boost customer loyalty and sales.</span>
                 </li>
               </ul>
             </GlassCard>
@@ -238,19 +217,15 @@ const App: React.FC = () => {
               <ul className="mt-5 list-none">
                 <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
                   <i className="fa-solid fa-circle text-orange-dark text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Acts as a "Technical Bridge," translating complex technical limitations and business goals into clear value propositions for executive stakeholders and development teams.</span>
+                  <span>Acted as technical liaison in high-stakes sales processes, translating complex AI/ML capabilities into compelling business value propositions.</span>
                 </li>
                 <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
                   <i className="fa-solid fa-circle text-orange-dark text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Managed the transition of significant ad spend in-house, achieving substantial annual savings and improving lead quality.</span>
+                  <span>Identified and implemented cost-saving opportunities, such as migrating from legacy systems to cloud-native solutions, yielding 30-50% efficiency gains.</span>
                 </li>
                 <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
                   <i className="fa-solid fa-circle text-orange-dark text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Provided technical advisory and training to leadership teams and sales forces, simplifying complex digital metrics into actionable operational adjustments.</span>
-                </li>
-                <li className="flex items-start mb-4 leading-relaxed text-shadow text-left">
-                  <i className="fa-solid fa-circle text-orange-dark text-xs mt-1 mr-3 flex-shrink-0"></i>
-                  <span>Expert in CRM Architecture, Pipeline Management, and Reseller Channel Management for optimized revenue operations.</span>
+                  <span>Advised on technology stack selections, ensuring alignment with long-term business objectives and scalability requirements.</span>
                 </li>
               </ul>
             </GlassCard>
@@ -259,72 +234,144 @@ const App: React.FC = () => {
 
         <HorizontalWaveSeparator />
 
-        <section id="skills" className="py-8 md:py-10">
+        <section id="toolkit" className="py-8 md:py-10">
           <SectionTitle>My Technical & Strategic Toolkit</SectionTitle>
-          <div className="grid grid-cols-1 gap-5 md:gap-6">
-            <SkillListItem
-              icon="fa-solid fa-microchip text-orange-dark"
-              title="AI & LLMs"
-              description="Vertex AI, Google AI Studio, Gemini (Pro/Ultra), Grok, ChatGPT, OpenAI API, LLM Application Design, Prompt Engineering (Chain-of-Thought, Few-Shot)"
-            />
-            <SkillListItem
-              icon="fa-solid fa-cloud text-orange-dark"
-              title="Cloud & Hosting"
-              description="Google Cloud Platform, Firebase Hosting, API Management, Cloud Architecture Design"
-            />
-            <SkillListItem
-              icon="fa-solid fa-code text-orange-dark"
-              title="Development & Automation"
-              description="Python, Visual Studio Code, Scripting (PoCs), Rapid Prototyping, Custom Integrations"
-            />
-            <SkillListItem
-              icon="fa-solid fa-robot text-orange-dark"
-              title="Generative Media"
-              description="Leonardo.ai, Ideogram, Midjourney, Google Veo, Adobe Creative Suite (Photoshop, Video Editing)"
-            />
-            <SkillListItem
-              icon="fa-solid fa-store text-orange-dark"
-              title="E-Commerce Platforms"
-              description="Amazon Seller Central (Expert), BigCommerce, Shopify, Miva Merchant, Logistics & Inventory Forecasting"
-            />
-            <SkillListItem
-              icon="fa-solid fa-chart-line text-orange-dark"
-              title="Marketing & CRM"
-              description="MarTech Stack Integration, CRM Architecture, Pipeline Management, Reseller Channel Management, Sales Enablement, SEO/vSEO Strategy"
-            />
-            <SkillListItem
-              icon="fa-solid fa-laptop-code text-orange-dark"
-              title="Frontend & Deployment"
-              description="React, Vercel, HTML5, CSS3, JavaScript"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 justify-center">
+            <GlassCard className="p-8 md:p-10">
+              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center">
+                Core Technologies
+              </h3>
+              <ul className="list-none space-y-3">
+                <SkillListItem icon="fa-brands fa-python">Python (Advanced Scripting & Automation)</SkillListItem>
+                <SkillListItem icon="fa-brands fa-react">React/TypeScript (Frontend Development)</SkillListItem>
+                <SkillListItem icon="fa-brands fa-node-js">Node.js/Express (Backend Services)</SkillListItem>
+                <SkillListItem icon="fa-solid fa-database">SQL/NoSQL Databases (PostgreSQL, MongoDB)</SkillListItem>
+              </ul>
+            </GlassCard>
+            <GlassCard className="p-8 md:p-10">
+              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center">
+                AI & Machine Learning
+              </h3>
+              <ul className="list-none space-y-3">
+                <SkillListItem icon="fa-solid fa-brain">Google Vertex AI / Gemini API</SkillListItem>
+                <SkillListItem icon="fa-brands fa-openai">OpenAI GPT Models</SkillListItem>
+                <SkillListItem icon="fa-solid fa-robot">Prompt Engineering & Chain-of-Thought</SkillListItem>
+                <SkillListItem icon="fa-solid fa-image">Generative AI (Midjourney, Leonardo.ai)</SkillListItem>
+              </ul>
+            </GlassCard>
+            <GlassCard className="p-8 md:p-10">
+              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center">
+                Cloud & DevOps
+              </h3>
+              <ul className="list-none space-y-3">
+                <SkillListItem icon="fa-brands fa-google">Google Cloud Platform (GCP)</SkillListItem>
+                <SkillListItem icon="fa-brands fa-aws">AWS (EC2, S3, Lambda)</SkillListItem>
+                <SkillListItem icon="fa-solid fa-fire">Firebase (Hosting & Authentication)</SkillListItem>
+                <SkillListItem icon="fa-brands fa-docker">Docker & Containerization</SkillListItem>
+              </ul>
+            </GlassCard>
+            <GlassCard className="p-8 md:p-10">
+              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center">
+                MarTech & E-Commerce
+              </h3>
+              <ul className="list-none space-y-3">
+                <SkillListItem icon="fa-brands fa-shopify">Shopify Plus (Custom Apps & Themes)</SkillListItem>
+                <SkillListItem icon="fa-solid fa-chart-line">Google Analytics / Tag Manager</SkillListItem>
+                <SkillListItem icon="fa-solid fa-envelope">Klaviyo / Email Marketing Automation</SkillListItem>
+                <SkillListItem icon="fa-solid fa-shopping-cart">ERP/CRM Integrations (NetSuite, HubSpot)</SkillListItem>
+              </ul>
+            </GlassCard>
           </div>
+        </section>
+
+        <HorizontalWaveSeparator />
+
+        {/* Moved Mike Sayre profile section */}
+        <section id="profile" className="py-8 md:py-10">
+          <SectionTitle>Mike Sayre: Senior MarTech & AI Strategist</SectionTitle>
+          <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-12 mb-7 flex-wrap">
+              <img
+                src={IMAGES.PROFILE_HEADSHOT}
+                alt="Mike Sayre Headshot"
+                className="w-32 h-32 md:w-52 md:h-52 rounded-full object-cover border-4 border-cyan-400 shadow-[0_0_50px_#00f0f0] flex-shrink-0 order-1 md:order-2 min-w-32 min-h-32 mb-5 md:mb-0"
+              />
+              <h1 className="font-orbitron text-4xl sm:text-5xl md:text-6xl lg:text-7xl m-0 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-[length:200%] bg-clip-text text-transparent animate-gradientFlow drop-shadow-cyan-strong order-2 md:order-1 whitespace-normal mb-5 md:mb-0 leading-[1.3] lg:leading-[1.5] pb-2 lg:pb-6">
+                Mike Sayre
+              </h1>
+            </div>
+            <div className="mt-4 bg-glass px-6 py-4 rounded-lg border border-cyan-800/30 self-start max-w-4xl w-full">
+              <h2 className="font-orbitron text-xl sm:text-2xl md:text-3xl text-cyan-300 drop-shadow-cyan-heading mb-2">
+                Senior MarTech & AI Strategist
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl opacity-90 text-shadow-cyan-medium">
+                <strong>Bridging Vision with Velocity:</strong> Dynamic MarTech leader and AI strategist with over 20 years of experience bridging traditional digital marketing/eCommerce with emerging AI technologies. Proven in translating business goals into scalable AI-driven solutions—automating workflows, optimizing operations, and driving revenue growth. Expert in rapid prototyping, generative AI for content/media, and MarTech stack integration. Acts as a "technical bridge" for stakeholders, delivering cost-effective, high-impact transformations in remote/hybrid environments.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <HorizontalWaveSeparator />
+
+        {/* Moved About section */}
+        <section id="about" className="py-8 md:py-10">
+          <SectionTitle>The 'Tech Bridge' Philosophy: Connecting Vision to Reality</SectionTitle>
+          <GlassCard className="flex flex-col items-center justify-center gap-10 md:gap-16 p-10 md:p-16">
+            <img src={IMAGES.SWAN_LAKE_MASCOT_512} alt="Swan Lake Digital Logo" className="w-40 md:w-52 drop-shadow-cyan-strong" />
+            <div className="text-left">
+              <p className="text-base md:text-lg mb-4 text-shadow">
+                As a Senior MarTech & AI Strategist, my core mission is to act as the "Technical Bridge" between executive stakeholders and development teams. I specialize in translating complex business goals into scalable technical solutions, designing and implementing custom integrations that resolve critical business bottlenecks.
+              </p>
+              <p className="text-base md:text-lg text-shadow">
+                My proven track record in rapid prototyping, workflow automation, and advanced AI strategy (utilizing Visual Studio, Python, and Vertex AI) consistently drives revenue growth by aligning technical capabilities directly with customer success. I'm dedicated to delivering innovative, high-impact solutions that move businesses forward.
+              </p>
+            </div>
+          </GlassCard>
         </section>
 
         <HorizontalWaveSeparator />
 
         <section id="contact" className="py-8 md:py-10">
           <SectionTitle>Connect for Strategic Impact</SectionTitle>
-          <GlassCard className="flex flex-col items-center justify-center gap-10 md:gap-20 p-10 md:p-16">
-            <img src={IMAGES.SWAN_LAKE_MASCOT_512} alt="Swan Lake Digital Mascot" className="w-48 md:w-72 drop-shadow-cyan-glow flex-shrink-0 max-w-full" />
-            <div className="text-left pointer-events-auto">
-              <p className="text-base md:text-lg mb-5 text-shadow">
-                Ready to bridge your business vision with cutting-edge technical execution? Let's discuss how my expertise in AI strategy, rapid prototyping, and digital transformation can drive your next success.
-              </p>
-              <p className="text-base md:text-lg mb-2 text-shadow">
-                Phone: <a href="tel:+15136466767" className="text-cyan-400 no-underline font-semibold hover:text-shadow-[0_0_15px_#00ffff]">513-646-6767</a>
-              </p>
-              <p className="text-base md:text-lg mb-2 text-shadow">
-                LinkedIn: <a href="https://www.linkedin.com/in/mikedsayre" target="_blank" rel="noopener noreferrer" className="text-cyan-400 no-underline font-semibold hover:text-shadow-[0_0_15px_#00ffff]">linkedin.com/in/mikedsayre</a>
-              </p>
-              <p className="text-base md:text-lg mb-2 text-shadow">
-                GitHub: <a href="https://github.com/mikedsayre" target="_blank" rel="noopener noreferrer" className="text-cyan-400 no-underline font-semibold hover:text-shadow-[0_0_15px_#00ffff]">github.com/mikedsayre</a>
-              </p>
-              <p className="text-base md:text-lg text-shadow">
-                Schedule a consultation: <a href="https://calendar.app.google/wZxkgTkq6UmM99eB8" target="_blank" rel="noopener noreferrer" className="text-cyan-400 no-underline font-semibold hover:text-shadow-[0_0_15px_#00ffff]">Book here →</a>
-              </p>
+          <GlassCard className="p-10 md:p-16 text-center">
+            <p className="text-base md:text-lg mb-6 text-shadow">
+              Ready to bridge your business vision with cutting-edge technical execution? Let's discuss how my expertise in AI strategy, rapid prototyping, and digital transformation can drive your next success.
+            </p>
+            <div className="flex flex-col items-center gap-4 md:gap-6">
+              <a
+                href="tel:+15136466767"
+                className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
+              >
+                Phone: 513-646-6767
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mikedsayre"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
+              >
+                LinkedIn: linkedin.com/in/mikedsayre
+              </a>
+              <a
+                href="https://github.com/mikedsayre"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
+              >
+                GitHub: github.com/mikedsayre
+              </a>
+              <a
+                href="https://calendar.app.google/wZxkgTkq6UmM99eB8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-cyan-400/10 border-2 border-cyan-400 rounded-full text-cyan-400 font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_40px_#00f0f0] text-sm sm:text-base mt-4"
+              >
+                Schedule a consultation: Book here →
+              </a>
             </div>
           </GlassCard>
         </section>
+
       </div>
       <Footer />
     </>
