@@ -92,10 +92,10 @@ const App: React.FC = () => {
             </div>
           </GlassCard>
 
-          <GlassCard className="flex flex-col md:flex-row-reverse items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto">
+          <GlassCard className="flex flex-col md:flex-row-reverse items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto mb-12">
             <img
-              src={IMAGES.SWAN_LAKE_MASCOT_512}
-              alt="Resume Studio Preview"
+              src={IMAGES.RESUME_STUDIO_LOGO}
+              alt="Resume Studio Logo"
               className="w-48 md:w-72 rounded-lg object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
             />
             <div className="text-left pointer-events-auto max-w-lg">
@@ -103,7 +103,7 @@ const App: React.FC = () => {
                 Resume Studio: Dynamic Markdown Resume Builder
               </h3>
               <p className="text-base md:text-lg mb-5 text-shadow">
-                Resume Studio is an interactive web-based resume editor that uses markdown input with live preview, customizable CSS themes, and exports to PDF, HTML, or Markdown. Built with React, TypeScript, and Vite, it demonstrates clean, user-focused frontend architecture and rapid tool development for productivity.
+                Resume Studio is a professional and futuristic markdown resume editor that empowers modern job seekers to craft stunning resumes with ease. It supports Markdown input with raw HTML embedding, real-time previews, dynamic futuristic themes, integrated CSS editing, and one-click exports to PDF, MD, or HTML. With responsive design, light/dark modes, and HTML sanitization for security, it solves the challenge of creating visually appealing, customized resumes quickly without needing advanced design or coding skills.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -116,6 +116,40 @@ const App: React.FC = () => {
                 </a>
                 <a
                   href="https://github.com/mikedsayre/resume-studio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-cyan-400/10 border-2 border-cyan-400 rounded-full text-cyan-400 font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_40px_#00f0f0] text-sm sm:text-base"
+                >
+                  View GitHub Repo →
+                </a>
+              </div>
+            </div>
+          </GlassCard>
+
+          <GlassCard className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto">
+            <img
+              src={IMAGES.JOB_PROFILE_LAB_LOGO}
+              alt="Job Profile Lab Logo"
+              className="w-48 md:w-72 rounded-lg object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
+            />
+            <div className="text-left pointer-events-auto max-w-lg">
+              <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading">
+                Job Profile Lab: The Science of Getting Hired
+              </h3>
+              <p className="text-base md:text-lg mb-5 text-shadow">
+                Job Profile Lab transforms your resume into an SEO-optimized LinkedIn profile using AI. It parses your resume, identifies roles, and rewrites content with industry keywords and high-value terms to boost visibility. Features include headline options, About section with specialties, enhanced experience descriptions, curated skills, staging interface for easy updates, one-click copy, and downloadable Markdown plan. Built with React, TypeScript, Tailwind, and Google Gemini API, it acts as a career coach, solving poor recruiter visibility and time-consuming profile updates.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://job-profile-lab.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-orange-dark/10 border-2 border-orange-dark rounded-full text-orange-dark font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(255,111,0,0.3)] hover:bg-orange-dark hover:text-black hover:shadow-[0_0_40px_#d97706] text-sm sm:text-base"
+                >
+                  View Live Demo →
+                </a>
+                <a
+                  href="https://github.com/mikedsayre/job-profile-lab"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-cyan-400/10 border-2 border-cyan-400 rounded-full text-cyan-400 font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_40px_#00f0f0] text-sm sm:text-base"
