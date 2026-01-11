@@ -86,11 +86,11 @@ const App: React.FC = () => {
                 Resume Studio: Dynamic Markdown Resume Builder
               </h3>
               <p className="text-base md:text-lg mb-5 text-shadow">
-                Resume Studio is a professional and futuristic markdown resume editor that empowers modern job seekers to craft stunning resumes with ease. It supports Markdown input with raw HTML embedding, real-time previews, dynamic futuristic themes, integrated CSS editing, and one-click exports to PDF, MD, or HTML. With responsive design, light/dark modes, and HTML sanitization for security, it solves the challenge of creating visually appealing, customized resumes quickly without needing advanced design or coding skills.
+                Resume Studio helps you craft professional resumes with ease using Markdown for content and custom CSS for styling. Enjoy real-time previews, raw HTML embedding, dynamic themes, one-click exports to PDF, MD, or HTML, responsive design, light/dark modes, and secure HTML sanitization. It solves the hassle of creating customized, visually appealing resumes without advanced skills, saving time for job seekers and businesses.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://resume-studio-phi.vercel.app/"
+                  href="https://resume-studio-app-zeta.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-orange-dark/10 border-2 border-orange-dark rounded-full text-orange-dark font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(255,111,0,0.3)] hover:bg-orange-dark hover:text-black hover:shadow-[0_0_40px_#d97706] text-sm sm:text-base"
@@ -98,7 +98,7 @@ const App: React.FC = () => {
                   View Live Demo →
                 </a>
                 <a
-                  href="https://github.com/mikedsayre/resume-studio"
+                  href="https://github.com/mikedsayre/resume-studio-app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-cyan-400/10 border-2 border-cyan-400 rounded-full text-cyan-400 font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_40px_#00f0f0] text-sm sm:text-base"
@@ -108,7 +108,7 @@ const App: React.FC = () => {
               </div>
             </div>
           </GlassCard>
-
+          
           <GlassCard className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto">
             <img
               src={IMAGES.JOB_PROFILE_LAB_LOGO}
