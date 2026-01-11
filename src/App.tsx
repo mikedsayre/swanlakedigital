@@ -286,44 +286,32 @@ const App: React.FC = () => {
 
         <HorizontalWaveSeparator />
 
-        {/* Moved Mike Sayre profile section */}
-        <section id="profile" className="py-8 md:py-10">
-          <SectionTitle>Mike Sayre: Senior MarTech & AI Strategist</SectionTitle>
-          <div className="flex flex-col items-center text-center">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-12 mb-7 flex-wrap">
-              <img
-                src={IMAGES.PROFILE_HEADSHOT}
-                alt="Mike Sayre Headshot"
-                className="w-32 h-32 md:w-52 md:h-52 rounded-full object-cover border-4 border-cyan-400 shadow-[0_0_50px_#00f0f0] flex-shrink-0 order-1 md:order-2 min-w-32 min-h-32 mb-5 md:mb-0"
-              />
-              <h1 className="font-orbitron text-4xl sm:text-5xl md:text-6xl lg:text-7xl m-0 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-[length:200%] bg-clip-text text-transparent animate-gradientFlow drop-shadow-cyan-strong order-2 md:order-1 whitespace-normal mb-5 md:mb-0 leading-[1.3] lg:leading-[1.5] pb-2 lg:pb-6">
-                Mike Sayre
-              </h1>
-            </div>
-            <div className="mt-4 bg-glass px-6 py-4 rounded-lg border border-cyan-800/30 self-start max-w-4xl w-full">
-              <h2 className="font-orbitron text-xl sm:text-2xl md:text-3xl text-cyan-300 drop-shadow-cyan-heading mb-2">
-                Senior MarTech & AI Strategist
-              </h2>
-              <p className="text-base sm:text-lg md:text-xl opacity-90 text-shadow-cyan-medium">
-                <strong>Bridging Vision with Velocity:</strong> Dynamic MarTech leader and AI strategist with over 20 years of experience bridging traditional digital marketing/eCommerce with emerging AI technologies. Proven in translating business goals into scalable AI-driven solutions—automating workflows, optimizing operations, and driving revenue growth. Expert in rapid prototyping, generative AI for content/media, and MarTech stack integration. Acts as a "technical bridge" for stakeholders, delivering cost-effective, high-impact transformations in remote/hybrid environments.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <HorizontalWaveSeparator />
-
-        {/* Moved About section */}
+        {/* Merged About section with Mike Sayre profile */}
         <section id="about" className="py-8 md:py-10">
           <SectionTitle>The 'Tech Bridge' Philosophy: Connecting Vision to Reality</SectionTitle>
           <GlassCard className="flex flex-col items-center justify-center gap-10 md:gap-16 p-10 md:p-16">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-4 md:mb-7 flex-wrap w-full">
+              <img
+                src={IMAGES.PROFILE_HEADSHOT}
+                alt="Mike Sayre Headshot"
+                className="w-32 h-32 md:w-52 md:h-52 rounded-full object-cover border-4 border-cyan-400 shadow-[0_0_50px_#00f0f0] flex-shrink-0 min-w-32 min-h-32"
+              />
+              <div className="text-center md:text-left">
+                <h1 className="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl m-0 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-[length:200%] bg-clip-text text-transparent animate-gradientFlow drop-shadow-cyan-strong whitespace-normal leading-[1.3] lg:leading-[1.5] pb-2 lg:pb-4">
+                  Mike Sayre
+                </h1>
+                <h2 className="font-orbitron text-lg sm:text-xl md:text-2xl lg:text-3xl text-cyan-300 drop-shadow-cyan-heading mb-2">
+                  Founder & Senior MarTech & AI Strategist, Swan Lake Digital
+                </h2>
+              </div>
+            </div>
             <img src={IMAGES.SWAN_LAKE_MASCOT_512} alt="Swan Lake Digital Logo" className="w-40 md:w-52 drop-shadow-cyan-strong" />
-            <div className="text-left">
+            <div className="text-left w-full">
               <p className="text-base md:text-lg mb-4 text-shadow">
-                As a Senior MarTech & AI Strategist, my core mission is to act as the "Technical Bridge" between executive stakeholders and development teams. I specialize in translating complex business goals into scalable technical solutions, designing and implementing custom integrations that resolve critical business bottlenecks.
+                At Swan Lake Digital, Mike Sayre serves as your "Technical Bridge," leveraging over 20 years of expertise to connect business vision with AI-powered execution. As a dynamic MarTech leader and AI strategist, he bridges traditional digital marketing and eCommerce with cutting-edge AI technologies—translating your goals into scalable solutions that automate workflows, optimize operations, and drive revenue growth.
               </p>
               <p className="text-base md:text-lg text-shadow">
-                My proven track record in rapid prototyping, workflow automation, and advanced AI strategy (utilizing Visual Studio, Python, and Vertex AI) consistently drives revenue growth by aligning technical capabilities directly with customer success. I'm dedicated to delivering innovative, high-impact solutions that move businesses forward.
+                Specializing in rapid prototyping, generative AI for content and media, and MarTech stack integration, Mike resolves critical business bottlenecks with custom integrations and innovative strategies. Whether it's streamlining processes using Python, Vertex AI, or Visual Studio, he delivers cost-effective, high-impact transformations in remote or hybrid environments—ensuring Swan Lake Digital tackles your challenges efficiently and effectively.
               </p>
             </div>
           </GlassCard>
