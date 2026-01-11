@@ -83,10 +83,10 @@ const App: React.FC = () => {
             />
             <div className="text-left pointer-events-auto max-w-lg">
               <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading leading-[1.5]">
-                Resume Studio: Dynamic Markdown Resume Builder
+                Resume Studio: Style Your Resume with Markdown & CSS
               </h3>
               <p className="text-base md:text-lg mb-5 text-shadow">
-                Resume Studio helps you craft professional resumes with ease using Markdown for content and custom CSS for styling. Enjoy real-time previews, raw HTML embedding, dynamic themes, one-click exports to PDF, MD, or HTML, responsive design, light/dark modes, and secure HTML sanitization. It solves the hassle of creating customized, visually appealing resumes without advanced skills, saving time for job seekers and businesses.
+                Resume Studio helps you style and craft professional resumes with ease using Markdown for content and custom CSS for styling. Enjoy real-time previews, one-click exports to PDF, MD, CSS, or HTML, responsive design, and secure HTML sanitization. It solves the hassle of creating customized, visually appealing resumes without advanced skills, saving time for job seekers and businesses.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
