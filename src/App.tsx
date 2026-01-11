@@ -22,12 +22,12 @@ const App: React.FC = () => {
               alt="Swan Lake Digital Mascot"
               className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover border-4 border-cyan-400 shadow-[0_0_50px_#00f0f0] flex-shrink-0"
             />
-            <h1 className="font-orbitron text-4xl sm:text-5xl md:text-6xl lg:text-7xl m-0 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-[length:200%] bg-clip-text text-transparent animate-gradientFlow drop-shadow-cyan-strong whitespace-normal leading-[1.3] lg:leading-[1.5] pb-2 lg:pb-6">
+            <h1 className="font-orbitron text-4xl sm:text-5xl md:text-6xl lg:text-7xl m-0 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-[length:200%] bg-clip-text text-transparent animate-gradientFlow drop-shadow-cyan-strong whitespace-normal leading-[1.5] pb-2 lg:pb-6">
               Swan Lake Digital
             </h1>
           </div>
           <div className="mt-4 bg-glass px-6 py-4 rounded-lg border border-cyan-800/30 max-w-4xl">
-            <h2 className="font-orbitron text-xl sm:text-2xl md:text-3xl text-cyan-300 drop-shadow-cyan-heading mb-2">
+            <h2 className="font-orbitron text-xl sm:text-2xl md:text-3xl text-cyan-300 drop-shadow-cyan-heading mb-2 leading-[1.5]">
               AI-Powered Innovation for Your Business
             </h2>
             <p className="text-base sm:text-lg md:text-xl opacity-90 text-shadow-cyan-medium">
@@ -48,7 +48,7 @@ const App: React.FC = () => {
               className="w-48 md:w-72 rounded-full object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
             />
             <div className="text-left pointer-events-auto max-w-lg">
-              <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading">
+              <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading leading-[1.5]">
                 SlangBot: AI-Powered Language Innovation
               </h3>
               <p className="text-base md:text-lg mb-5 text-shadow">
@@ -82,7 +82,7 @@ const App: React.FC = () => {
               className="w-48 md:w-72 rounded-lg object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
             />
             <div className="text-left pointer-events-auto max-w-lg">
-              <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading">
+              <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading leading-[1.5]">
                 Resume Studio: Dynamic Markdown Resume Builder
               </h3>
               <p className="text-base md:text-lg mb-5 text-shadow">
@@ -116,7 +116,7 @@ const App: React.FC = () => {
               className="w-48 md:w-72 rounded-lg object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
             />
             <div className="text-left pointer-events-auto max-w-lg">
-              <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading">
+              <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading leading-[1.5]">
                 Job Profile Lab: The Science of Getting Hired
               </h3>
               <p className="text-base md:text-lg mb-5 text-shadow">
@@ -150,7 +150,7 @@ const App: React.FC = () => {
           <SectionTitle>Strategic Impact & Core Capabilities</SectionTitle>
           <div className="grid grid-cols-1 gap-8 md:gap-10 justify-center">
             <GlassCard>
-              <h3 className="font-orbitron text-xl md:text-2xl text-orange-dark mb-2.5 text-shadow-orange-subheading text-center">
+              <h3 className="font-orbitron text-xl md:text-2xl text-orange-dark mb-2.5 text-shadow-orange-subheading text-center leading-[1.5]">
                 AI Strategy & Rapid Prototyping
               </h3>
               <ul className="mt-5 list-none">
@@ -173,7 +173,7 @@ const App: React.FC = () => {
               </ul>
             </GlassCard>
             <GlassCard>
-              <h3 className="font-orbitron text-xl md:text-2xl text-orange-dark mb-2.5 text-shadow-orange-subheading text-center">
+              <h3 className="font-orbitron text-xl md:text-2xl text-orange-dark mb-2.5 text-shadow-orange-subheading text-center leading-[1.5]">
                 Digital Transformation & Workflow Automation
               </h3>
               <ul className="mt-5 list-none">
@@ -192,7 +192,7 @@ const App: React.FC = () => {
               </ul>
             </GlassCard>
             <GlassCard>
-              <h3 className="font-orbitron text-xl md:text-2xl text-orange-dark mb-2.5 text-shadow-orange-subheading text-center">
+              <h3 className="font-orbitron text-xl md:text-2xl text-orange-dark mb-2.5 text-shadow-orange-subheading text-center leading-[1.5]">
                 E-Commerce & Revenue Acceleration
               </h3>
               <ul className="mt-5 list-none">
@@ -211,7 +211,7 @@ const App: React.FC = () => {
               </ul>
             </GlassCard>
             <GlassCard>
-              <h3 className="font-orbitron text-xl md:text-2xl text-orange-dark mb-2.5 text-shadow-orange-subheading text-center">
+              <h3 className="font-orbitron text-xl md:text-2xl text-orange-dark mb-2.5 text-shadow-orange-subheading text-center leading-[1.5]">
                 Technical Leadership & Sales Enablement
               </h3>
               <ul className="mt-5 list-none">
@@ -238,7 +238,7 @@ const App: React.FC = () => {
           <SectionTitle>My Technical & Strategic Toolkit</SectionTitle>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 justify-center">
             <GlassCard className="p-8 md:p-10">
-              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center">
+              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center leading-[1.5]">
                 Core Technologies
               </h3>
               <ul className="list-none space-y-3">
@@ -249,7 +249,7 @@ const App: React.FC = () => {
               </ul>
             </GlassCard>
             <GlassCard className="p-8 md:p-10">
-              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center">
+              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center leading-[1.5]">
                 AI & Machine Learning
               </h3>
               <ul className="list-none space-y-3">
@@ -260,7 +260,7 @@ const App: React.FC = () => {
               </ul>
             </GlassCard>
             <GlassCard className="p-8 md:p-10">
-              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center">
+              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center leading-[1.5]">
                 Cloud & DevOps
               </h3>
               <ul className="list-none space-y-3">
@@ -271,7 +271,7 @@ const App: React.FC = () => {
               </ul>
             </GlassCard>
             <GlassCard className="p-8 md:p-10">
-              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center">
+              <h3 className="font-orbitron text-xl md:text-2xl text-cyan-300 mb-4 text-shadow-cyan-subheading text-center leading-[1.5]">
                 MarTech & E-Commerce
               </h3>
               <ul className="list-none space-y-3">
@@ -286,7 +286,7 @@ const App: React.FC = () => {
 
         <HorizontalWaveSeparator />
 
-        {/* Merged About section with Mike Sayre profile */}
+        {/* Merged About section with Mike Sayre profile, without mascot */}
         <section id="about" className="py-8 md:py-10">
           <SectionTitle>The 'Tech Bridge' Philosophy: Connecting Vision to Reality</SectionTitle>
           <GlassCard className="flex flex-col items-center justify-center gap-10 md:gap-16 p-10 md:p-16">
@@ -297,15 +297,14 @@ const App: React.FC = () => {
                 className="w-32 h-32 md:w-52 md:h-52 rounded-full object-cover border-4 border-cyan-400 shadow-[0_0_50px_#00f0f0] flex-shrink-0 min-w-32 min-h-32"
               />
               <div className="text-center md:text-left">
-                <h1 className="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl m-0 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-[length:200%] bg-clip-text text-transparent animate-gradientFlow drop-shadow-cyan-strong whitespace-normal leading-[1.3] lg:leading-[1.5] pb-2 lg:pb-4">
+                <h1 className="font-orbitron text-3xl sm:text-4xl md:text-5xl lg:text-6xl m-0 bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 bg-[length:200%] bg-clip-text text-transparent animate-gradientFlow drop-shadow-cyan-strong whitespace-normal leading-[1.5] pb-2 lg:pb-4">
                   Mike Sayre
                 </h1>
-                <h2 className="font-orbitron text-lg sm:text-xl md:text-2xl lg:text-3xl text-cyan-300 drop-shadow-cyan-heading mb-2">
+                <h2 className="font-orbitron text-lg sm:text-xl md:text-2xl lg:text-3xl text-cyan-300 drop-shadow-cyan-heading mb-2 leading-[1.5]">
                   Founder & Senior MarTech & AI Strategist, Swan Lake Digital
                 </h2>
               </div>
             </div>
-            <img src={IMAGES.SWAN_LAKE_MASCOT_512} alt="Swan Lake Digital Logo" className="w-40 md:w-52 drop-shadow-cyan-strong" />
             <div className="text-left w-full">
               <p className="text-base md:text-lg mb-4 text-shadow">
                 At Swan Lake Digital, Mike Sayre serves as your "Technical Bridge," leveraging over 20 years of expertise to connect business vision with AI-powered execution. As a dynamic MarTech leader and AI strategist, he bridges traditional digital marketing and eCommerce with cutting-edge AI technologies—translating your goals into scalable solutions that automate workflows, optimize operations, and drive revenue growth.
@@ -321,41 +320,44 @@ const App: React.FC = () => {
 
         <section id="contact" className="py-8 md:py-10">
           <SectionTitle>Connect for Strategic Impact</SectionTitle>
-          <GlassCard className="p-10 md:p-16 text-center">
-            <p className="text-base md:text-lg mb-6 text-shadow">
-              Ready to bridge your business vision with cutting-edge technical execution? Let's discuss how my expertise in AI strategy, rapid prototyping, and digital transformation can drive your next success.
-            </p>
-            <div className="flex flex-col items-center gap-4 md:gap-6">
-              <a
-                href="tel:+15136466767"
-                className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
-              >
-                Phone: 513-646-6767
-              </a>
-              <a
-                href="https://www.linkedin.com/in/mikedsayre"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
-              >
-                LinkedIn: linkedin.com/in/mikedsayre
-              </a>
-              <a
-                href="https://github.com/mikedsayre"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
-              >
-                GitHub: github.com/mikedsayre
-              </a>
-              <a
-                href="https://calendar.app.google/wZxkgTkq6UmM99eB8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-cyan-400/10 border-2 border-cyan-400 rounded-full text-cyan-400 font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_40px_#00f0f0] text-sm sm:text-base mt-4"
-              >
-                Schedule a consultation: Book here →
-              </a>
+          <GlassCard className="p-10 md:p-16 text-center flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16">
+            <img src={IMAGES.SWAN_LAKE_MASCOT_512} alt="Swan Lake Digital Logo" className="w-40 md:w-52 drop-shadow-cyan-strong order-2 md:order-1" />
+            <div className="order-1 md:order-2">
+              <p className="text-base md:text-lg mb-6 text-shadow">
+                Ready to bridge your business vision with cutting-edge technical execution? Let's discuss how my expertise in AI strategy, rapid prototyping, and digital transformation can drive your next success.
+              </p>
+              <div className="flex flex-col items-center gap-4 md:gap-6">
+                <a
+                  href="tel:+15136466767"
+                  className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
+                >
+                  Phone: 513-646-6767
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mikedsayre"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
+                >
+                  LinkedIn: linkedin.com/in/mikedsayre
+                </a>
+                <a
+                  href="https://github.com/mikedsayre"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
+                >
+                  GitHub: github.com/mikedsayre
+                </a>
+                <a
+                  href="https://calendar.app.google/wZxkgTkq6UmM99eB8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-cyan-400/10 border-2 border-cyan-400 rounded-full text-cyan-400 font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_40px_#00f0f0] text-sm sm:text-base mt-4"
+                >
+                  Schedule a consultation: Book here →
+                </a>
+              </div>
             </div>
           </GlassCard>
         </section>
