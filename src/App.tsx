@@ -354,7 +354,7 @@ const App: React.FC = () => {
                    rel="noopener noreferrer"
                    className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
                 >
-                  Download Resume PDF: Made with Resume Studio!
+                  View PDF Resume: Made with Resume Studio
                   </a> 
                 <a
                   href="https://calendar.app.google/wZxkgTkq6UmM99eB8"
