@@ -52,7 +52,7 @@ const App: React.FC = () => {
                 SlangBot: AI-Powered Language Innovation
               </h3>
               <p className="text-base md:text-lg mb-5 text-shadow">
-                SlangBot is a live AI application I prototyped to demonstrate the power of LLMs in creative language tasks. It decodes modern slang and generates inventive new terms, all presented through a unique retro-futuristic UI/UX. This project showcases my expertise in LLM integration, prompt engineering, and rapid full-stack deployment.
+                SlangBot is a live AI application I prototyped to demonstrate the power of LLMs in creative language tasks. It decodes modern slang and generates inventive and hilarious new terms or sayings, all presented through a unique and fun-to-use retro-futuristic UI/UX. This project showcases my expertise in LLM integration, prompt engineering, and rapid full-stack deployment.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
