@@ -52,7 +52,7 @@ const App: React.FC = () => {
                 SlangBot: AI-Powered Language Innovation
               </h3>
               <p className="text-base md:text-lg mb-5 text-shadow">
-                SlangBot is a live AI application I prototyped to demonstrate the power of LLMs in creative language tasks. It decodes modern slang and generates inventive and hilarious new terms or sayings, all presented through a unique and fun-to-use retro-futuristic UI/UX. This project showcases my expertise in LLM integration, prompt engineering, and rapid full-stack deployment.
+                SlangBot is a fun, live AI app I prototyped to showcase the magic of multimodal AI in playful language tasks. It breaks down today's slang and whips up hilarious, inventive new terms or sayings, all wrapped in a retro-futuristic interface that's a blast to use. This project highlights Swan Lake Digital's knack for transforming raw ideas into quick prototypes, with smart AI strategies like LLM integration, prompt engineering, rapid full-stack deployment, and live testing—perfect for demos, funding pitches, or just sparking innovation.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
