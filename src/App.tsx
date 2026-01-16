@@ -75,6 +75,40 @@ const App: React.FC = () => {
             </div>
           </GlassCard>
 
+          <GlassCard className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto mb-12">
+            <img
+              src={IMAGES.SLANGBOT_MASCOT_PLACEHOLDER}
+              alt="Prompt Cooker"
+              className="w-48 md:w-72 rounded-full object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
+            />
+            <div className="text-left pointer-events-auto max-w-lg">
+              <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading leading-[1.3] lg:leading-[1.8] pb-2 lg:pb-8">
+                Prompt Cooker: Your Recipe for Perfect Prompts
+              </h3>
+              <p className="text-base md:text-lg mb-5 text-shadow">
+                Prompt Cooker is your AI prompt chef! Turn raw ideas into perfectly seasoned "prompt recipes" for any AI system. Craft precise instructions, fine-tune persona, tone, & format, ensuring stellar outputs from tools like Gemini, Grok or ChatGPT. Stop feeding AIs bland inputs – it's time to cook up brilliance!
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://prompt-cooker-app.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-orange-dark/10 border-2 border-orange-dark rounded-full text-orange-dark font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(217,119,6,0.3)] hover:bg-orange-dark hover:text-black hover:shadow-[0_0_40px_#d97706] text-sm sm:text-base"
+                >
+                  View Live Demo →
+                </a>
+                <a
+                  href="https://github.com/mikedsayre/prompt-cooker-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-cyan-400/10 border-2 border-cyan-400 rounded-full text-cyan-400 font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_40px_#00f0f0] text-sm sm:text-base"
+                >
+                  View GitHub Repo →
+                </a>
+              </div>
+            </div>
+          </GlassCard>
+          
           <GlassCard className="flex flex-col md:flex-row-reverse items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto mb-12">
             <img
               src={IMAGES.RESUME_STUDIO_LOGO}
