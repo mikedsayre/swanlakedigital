@@ -124,7 +124,7 @@ const App: React.FC = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://resume-studio-phi.vercel.app/"
+                  href="https://resume-studio-app-zeta.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-orange-dark/10 border-2 border-orange-dark rounded-full text-orange-dark font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(255,111,0,0.3)] hover:bg-orange-dark hover:text-black hover:shadow-[0_0_40px_#d97706] text-sm sm:text-base"
@@ -132,7 +132,7 @@ const App: React.FC = () => {
                   View Live Demo →
                 </a>
                 <a
-                  href="https://github.com/mikedsayre/resume-studio"
+                  href="https://github.com/mikedsayre/resume-studio-app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-cyan-400/10 border-2 border-cyan-400 rounded-full text-cyan-400 font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_40px_#00f0f0] text-sm sm:text-base"
