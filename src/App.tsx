@@ -77,7 +77,7 @@ const App: React.FC = () => {
 
           <GlassCard className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto mb-12">
             <img
-              src={IMAGES.SLANGBOT_MASCOT_PLACEHOLDER}
+              src={IMAGES.PROMPT_COOKER_MASCOT}
               alt="Prompt Cooker"
               className="w-48 md:w-72 rounded-full object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
             />
