@@ -5,5 +5,5 @@ export const IMAGES = {
   SLANGBOT_MASCOT_PLACEHOLDER: '/images/slangbot-app-512x.png',
   RESUME_STUDIO_LOGO: '/images/resume-studio-mascot-256px.png',
   JOB_PROFILE_LAB_LOGO: '/images/job-lab-mascot-specs-256px.png',
-  PROMPT_COOKER_MASCOT: '/images/Prompt-Cooker-App-Your-Recipe-For-The-Perfect-Prompts-256px',
+  PROMPT_COOKER_MASCOT: '/images/Prompt-Cooker-App-Your-Recipe-For-The-Perfect-Prompts-256px.png',
 };
