@@ -383,7 +383,7 @@ const App: React.FC = () => {
                   GitHub: github.com/mikedsayre
                 </a>
                 <a
-                   href="https://www.swanlakedigital.com/docs/mike-sayre-resume-01112026-dark-mode.pdf"
+                   href="https://www.swanlakedigital.com/docs/Mike-Sayre-01112026-dark-mode-html-gdoc.pdf"
                    target="_blank"
                    rel="noopener noreferrer"
                    className="text-cyan-300 hover:text-cyan-100 transition-colors text-base md:text-lg"
