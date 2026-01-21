@@ -52,7 +52,7 @@ const App: React.FC = () => {
                 ProfitGuard AI: Command Center
               </h3>
               <p className="text-base md:text-lg mb-5 text-shadow">
-                A profit-aware advertising dashboard that exposes the truth behind ROAS. Visualizes real net margins and COGS for Google, Meta, and TikTok ads. Built with React, TypeScript, and Tailwind. Integrate Google Ads APi for automated controls, or test by uploading a CSV ads report for your action plan.
+                A profit-aware advertising dashboard that exposes the truth behind ROAS. Visualizes real net margins and COGS for Google, Meta, and TikTok ads. Built with React, TypeScript, and Tailwind. Integrate Google Ads API for automated controls, or test by uploading a CSV ads report for your action plan.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
