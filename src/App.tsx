@@ -143,11 +143,11 @@ const App: React.FC = () => {
             </div>
           </GlassCard>
           
-          <GlassCard className="flex flex-col md:flex-row-reverse items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto mb-12">
+          <GlassCard className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto mb-12">
             <img
               src={IMAGES.RESUME_STUDIO_LOGO}
               alt="Resume Studio Logo"
-              className="w-48 md:w-72 rounded-lg object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
+              className="w-48 md:w-72 rounded-full object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
             />
             <div className="text-left pointer-events-auto max-w-lg">
               <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading leading-[1.3] lg:leading-[1.8] pb-2 lg:pb-8">
@@ -181,7 +181,7 @@ const App: React.FC = () => {
             <img
               src={IMAGES.JOB_PROFILE_LAB_LOGO}
               alt="Job Profile Lab Logo"
-              className="w-48 md:w-72 rounded-lg object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
+              className="w-48 md:w-72 rounded-full object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
             />
             <div className="text-left pointer-events-auto max-w-lg">
               <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading leading-[1.3] lg:leading-[1.8] pb-2 lg:pb-8">
@@ -211,7 +211,6 @@ const App: React.FC = () => {
             </div>
           </GlassCard>
         </section>
-
         <HorizontalWaveSeparator />
 
         <section id="capabilities" className="py-8 md:py-10">
