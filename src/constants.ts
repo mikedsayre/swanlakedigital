@@ -6,4 +6,5 @@ export const IMAGES = {
   RESUME_STUDIO_LOGO: '/images/resume-studio-mascot-256px.png',
   JOB_PROFILE_LAB_LOGO: '/images/job-lab-mascot-specs-256px.png',
   PROMPT_COOKER_MASCOT: '/images/Prompt-Cooker-App-Your-Recipe-For-The-Perfect-Prompts-256px.png',
+  PROFITGUARD_LOGO: '/images/profitguard-logo-256px.png',
 };
