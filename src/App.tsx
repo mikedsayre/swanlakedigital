@@ -43,6 +43,40 @@ const App: React.FC = () => {
           
           <GlassCard className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto mb-12">
             <img
+              src={IMAGES.PROFITGUARD_PLACEHOLDER}
+              alt="ProfitGuard AI Logo"
+              className="w-48 md:w-72 rounded-full object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
+            />
+            <div className="text-left pointer-events-auto max-w-lg">
+              <h3 className="font-orbitron text-xl md:text-3xl text-orange-dark mb-2.5 text-shadow-orange-subheading leading-[1.3] lg:leading-[1.8] pb-2 lg:pb-8">
+                ProfitGuard AI: Command Center
+              </h3>
+              <p className="text-base md:text-lg mb-5 text-shadow">
+                A profit-aware advertising dashboard that exposes the truth behind ROAS. Visualizes real net margins and COGS for Google, Meta, and TikTok ads. Built with React, TypeScript, and Tailwind. Integrate Google Ads APi for automated controls, or test by uploading a CSV ads report for your action plan.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://profit-guard-ai.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-orange-dark/10 border-2 border-orange-dark rounded-full text-orange-dark font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(217,119,6,0.3)] hover:bg-orange-dark hover:text-black hover:shadow-[0_0_40px_#d97706] text-sm sm:text-base"
+                >
+                  View Live Demo →
+                </a>
+                <a
+                  href="https://github.com/mikedsayre/ProfitGuard-AI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-2 px-6 sm:py-3 sm:px-8 bg-cyan-400/10 border-2 border-cyan-400 rounded-full text-cyan-400 font-semibold no-underline transition-all duration-400 shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_40px_#00f0f0] text-sm sm:text-base"
+                >
+                  View GitHub Repo →
+                </a>
+              </div>
+            </div>
+          </GlassCard>
+          
+          <GlassCard className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 p-10 md:p-16 max-w-5xl mx-auto mb-12">
+            <img
               src={IMAGES.SLANGBOT_MASCOT_PLACEHOLDER}
               alt="SlangBot Mascot"
               className="w-48 md:w-72 rounded-full object-cover border-4 border-orange-dark shadow-[0_0_50px_#d97706] drop-shadow-orange-strong flex-shrink-0"
