@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { IMAGES } from '../constants';
 
 export const Navbar: React.FC = () => {
@@ -13,6 +14,25 @@ export const Navbar: React.FC = () => {
     { name: 'Skills', href: '#toolkit' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const mobileMenu = (
+    <div
+      className={`fixed inset-0 bg-black z-[110] flex flex-col items-center justify-center gap-8 transition-all duration-300 ease-in-out md:hidden ${
+        isOpen ? 'opacity-100 visible translate-x-0' : 'opacity-0 invisible translate-x-full'
+      }`}
+    >
+      {navLinks.map((link) => (
+        <a
+          key={link.name}
+          href={link.href}
+          onClick={() => setIsOpen(false)}
+          className="text-cyan-300 text-2xl font-orbitron font-bold tracking-wider hover:text-white hover:scale-110 transition-all duration-300 no-underline drop-shadow-[0_0_10px_rgba(0,240,240,0.5)]"
+        >
+          {link.name}
+        </a>
+      ))}
+    </div>
+  );
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[100] bg-black/90 backdrop-blur-md border-b border-cyan-800/30">
@@ -60,25 +80,10 @@ export const Navbar: React.FC = () => {
             />
           </div>
         </button>
-
-        {/* Mobile Menu Overlay - SOLID BACKGROUND FIXED */}
-        <div
-          className={`fixed inset-0 bg-black z-[110] flex flex-col items-center justify-center gap-8 transition-all duration-300 ease-in-out md:hidden ${
-            isOpen ? 'opacity-100 visible translate-x-0' : 'opacity-0 invisible translate-x-full'
-          }`}
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-cyan-300 text-3xl font-orbitron font-bold tracking-wider hover:text-white hover:scale-110 transition-all duration-300 no-underline drop-shadow-[0_0_10px_rgba(0,240,240,0.5)]"
-            >
-              {link.name}
-            </a>
-          ))}
-        </div>
       </div>
+
+      {/* Mobile Menu Overlay via Portal */}
+      {isOpen && createPortal(mobileMenu, document.body)}
     </nav>
   );
 };
