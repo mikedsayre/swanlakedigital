@@ -3,7 +3,6 @@ import { IMAGES } from '../constants';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
@@ -44,20 +43,20 @@ export const Navbar: React.FC = () => {
           aria-label="Toggle Menu"
         >
           <div className="w-7 h-6 flex flex-col justify-between">
-            <span 
-              className={`w-full h-0.5 bg-cyan-300 shadow-[0_0_5px_#00f0f0] rounded-full transition-all duration-300 ease-in-out origin-left ${
-                isOpen ? 'rotate-45 -translate-y-0.5' : ''
-              }`} 
+            <span
+              className={`w-full h-0.5 bg-cyan-300 shadow-[0_0_5px_#00f0f0] rounded-full transition-all duration-300 ease-in-out ${
+                isOpen ? 'rotate-45 translate-y-2' : ''
+              }`}
             />
-            <span 
+            <span
               className={`w-full h-0.5 bg-cyan-300 shadow-[0_0_5px_#00f0f0] rounded-full transition-opacity duration-300 ${
                 isOpen ? 'opacity-0' : 'opacity-100'
-              }`} 
+              }`}
             />
-            <span 
-              className={`w-full h-0.5 bg-cyan-300 shadow-[0_0_5px_#00f0f0] rounded-full transition-all duration-300 ease-in-out origin-left ${
-                isOpen ? '-rotate-45 translate-y-0.5' : ''
-              }`} 
+            <span
+              className={`w-full h-0.5 bg-cyan-300 shadow-[0_0_5px_#00f0f0] rounded-full transition-all duration-300 ease-in-out ${
+                isOpen ? '-rotate-45 -translate-y-2' : ''
+              }`}
             />
           </div>
         </button>
