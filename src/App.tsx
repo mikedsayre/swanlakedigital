@@ -55,17 +55,28 @@ export default function App() {
 
       <main className="flex-1">
         <section className="border-b border-rule py-14 sm:py-16">
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-muted">
-            Mike Sayre · owner
-          </p>
-          <h1 className="font-serif text-[2.6rem] leading-[1.12] tracking-tight text-ink sm:text-6xl">
-            Marketing, sites, and the system a job needs.
-          </h1>
-          <p className="mt-6 max-w-[34rem] text-[1.125rem] leading-8 text-muted">
-            My own shop. I figure out the goal, then learn the tools. The
-            person is at{" "}
-            <ExternalLink href={links.mike}>mikedsayre.com</ExternalLink>.
-          </p>
+          <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:gap-10">
+            <img
+              src="/mike-sayre.png"
+              alt="Mike Sayre"
+              width={272}
+              height={272}
+              className="h-28 w-28 shrink-0 rounded-full border border-rule object-cover object-[center_12%] sm:h-[8.5rem] sm:w-[8.5rem]"
+            />
+            <div>
+              <p className="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-muted">
+                Mike Sayre · owner
+              </p>
+              <h1 className="font-serif text-[2.6rem] leading-[1.12] tracking-tight text-ink sm:text-6xl">
+                Marketing, sites, and the system a job needs.
+              </h1>
+              <p className="mt-6 max-w-[34rem] text-[1.125rem] leading-8 text-muted">
+                My own shop. I figure out the goal, then learn the tools. The
+                person is at{" "}
+                <ExternalLink href={links.mike}>mikedsayre.com</ExternalLink>.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section
