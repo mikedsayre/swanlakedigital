@@ -1,1 +1,0 @@
-// This file is no longer needed as DemoCard functionality has been refactored into App.tsx using GlassCard.

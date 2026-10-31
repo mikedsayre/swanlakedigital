@@ -2,8 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --paper: #f3efe6;
+  --ink: #1c1915;
+  --muted: #5e5850;
+  --rule: #d4ccc0;
+  --pine: #2a4a42;
+  --pine-hover: #16332d;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #c5d4ce;
+  color: var(--ink);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 50;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.5rem 0.75rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+a {
+  color: var(--pine);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--pine-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--pine);
+  outline-offset: 3px;
 }
